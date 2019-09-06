@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>yulia&#39;s</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(React Native) WebView에서 popup처리를 위해 했던 삽질들webview를 이용해 기존 웹사이트를 react-native앱에 띄울 때 social login(특히 facebook) 버튼들이 팝업 방식으로 작동해 아주 그냥 속을 썩였다. android에서는 괜찮았는데 ios에서는 로그인 버튼을 누르면 로그인 창이 자꾸 앱 외부(safari등">
+<meta property="og:type" content="article">
+<meta property="og:title" content="yulia&#39;s">
+<meta property="og:url" content="https://ldyulia.github.io/2019/06/28/(React Native) WebView에서 pop up처리를 위해 했던 삽질들/index.html">
+<meta property="og:site_name" content="yulia&#39;s">
+<meta property="og:description" content="(React Native) WebView에서 popup처리를 위해 했던 삽질들webview를 이용해 기존 웹사이트를 react-native앱에 띄울 때 social login(특히 facebook) 버튼들이 팝업 방식으로 작동해 아주 그냥 속을 썩였다. android에서는 괜찮았는데 ios에서는 로그인 버튼을 누르면 로그인 창이 자꾸 앱 외부(safari등">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-07-11T03:32:42.153Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="yulia&#39;s">
+<meta name="twitter:description" content="(React Native) WebView에서 popup처리를 위해 했던 삽질들webview를 이용해 기존 웹사이트를 react-native앱에 띄울 때 social login(특히 facebook) 버튼들이 팝업 방식으로 작동해 아주 그냥 속을 썩였다. android에서는 괜찮았는데 ios에서는 로그인 버튼을 누르면 로그인 창이 자꾸 앱 외부(safari등">
+  
+    <link rel="alternate" href="/atom.xml" title="yulia&#39;s" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">yulia&#39;s</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ldyulia.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-(React Native) WebView에서 pop up처리를 위해 했던 삽질들" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/28/(React Native) WebView에서 pop up처리를 위해 했던 삽질들/" class="article-date">
+  <time datetime="2019-06-28T02:34:06.992Z" itemprop="datePublished">2019-06-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="React-Native-WebView에서-popup처리를-위해-했던-삽질들"><a href="#React-Native-WebView에서-popup처리를-위해-했던-삽질들" class="headerlink" title="(React Native) WebView에서 popup처리를 위해 했던 삽질들"></a>(React Native) WebView에서 popup처리를 위해 했던 삽질들</h2><p>webview를 이용해 기존 웹사이트를 react-native앱에 띄울 때 social login(특히 facebook) 버튼들이 팝업 방식으로 작동해 아주 그냥 속을 썩였다. android에서는 괜찮았는데 ios에서는 로그인 버튼을 누르면 로그인 창이 자꾸 앱 외부(safari등 디바이스의 기본 브라우저)로 빠져나갔기 때문이었다. 그리고 로그인을 하면 다시 앱으로 돌아와지지 않아.. </p>
+<p>결론적으로 이 문제는 아주 허무하게 해결됐다. </p>
+<p>react-native-wkwebview-reborn 문서에서 다음과 같은 내용을 찾은것..</p>
+<ul>
+<li><strong>openNewWindowInWebView</strong></li>
+</ul>
+<p>If set to true, links with <code>target=&quot;_blank&quot;</code> or <code>window.open</code> will be opened in the current webview, not in Safari. Default is false.</p>
+<p>(Ref: <a href="https://www.npmjs.com/package/react-native-wkwebview-reborn" target="_blank" rel="noopener">https://www.npmjs.com/package/react-native-wkwebview-reborn</a>)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">&lt;WKWebView </span><br><span class="line">	...</span><br><span class="line">	openNewWindowInWebView=&#123;true&#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+
+<p>그러니까 그냥 위와같이 props 하나만 입력해 주면 해결이 되는 문제였던 거다…ㅠ</p>
+<p>찾고보니 왜 android에서는 팝업이 바깥으로 빠져나가지 않았는데 ios에서만 계속 문제가됐는지도 알 것 같았다.</p>
+<p>몇 가지 기능적인 문제 때문에 <code>Platform.OS === &#39;ios&#39;</code> 조건으로 ios이면 react-native-wkwebview-reborn 을, android면 그냥 react native가 제공하는 webview를 이용했는데 아마도 webview에서는 openNewWindowInWebView값이 기본적으로 true였던 것 같다. (일단 webview문서에서는 openNewWindowInWebView라는 props를 찾아볼 수 없다.)</p>
+<p>그리고 아래는 이걸 모르고 했던 무수한 삽질들.</p>
+<p>popup이 외부로 빠져나가지 않게 하기 위해서 결국은 injectedJavascript를 이용해 버튼을 새로 만들고 (처음에는 기존 버튼에 스크립트만 덧씌우려고 했는데 잘 안 됐다. 이것도 아직 이유는 모르겠음…) 각 소셜 서비스의 login dialogue주소로 url을 보내는 방식을 적용하려 했다. 하면서도 삽질이고 좋은 방법이 아니라는 것은 알았지만 어쨌든 작동은 잘 됐음..</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">render()&#123;</span><br><span class="line">	const mobileBtn = `</span><br><span class="line">    document.querySelector(&apos;.sns&apos;).innerHTML = &apos;&lt;button type=&quot;button&quot; id=&quot;mobilefb&quot;&gt;&lt;span&gt;SIGN IN FACEBOOK&lt;/span&gt;&lt;/button&gt;&apos;;</span><br><span class="line">    </span><br><span class="line">    const fb = document.getElementById(&apos;mobilefb&apos;);</span><br><span class="line">    </span><br><span class="line">    fb.addEventListener(&apos;click&apos;, function()&#123;</span><br><span class="line">            window.location = encodeURI(&quot;https://m.stylenanda.com/api/member/Oauth2ClientLogin/facebook/&quot;); </span><br><span class="line">          &#125;)</span><br><span class="line">	`;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	return (</span><br><span class="line">		&lt;WebView </span><br><span class="line">      ...</span><br><span class="line">			injectedJavaScript=&#123;this.state.toMobile ? mobile : null&#125;</span><br><span class="line">		/&gt;</span><br><span class="line">	)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>window.location을 이용해 연결시킬 uri는 <code>onNavigationStateChange</code> props를 이용해 얻었다. </p>
+<p>굉장한 삽질이었지만 덕분에 webview와 javascript의 커뮤니케이션에 대해 나름 공부가 됐음…</p>
+<p>p.s. 사실 이 삽질을 하고 2주쯤 뒤 ios와 android 모두 react-native-webview모듈로 migration을 했다.. 기존의 react-native의 webview에서는 지원하지 않던 여러 기능들도 react-native-webview에서는 거의 다 지원이 됐다. </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ldyulia.github.io/2019/06/28/(React Native) WebView에서 pop up처리를 위해 했던 삽질들/" data-id="ck08839u800008i0plfv02o7f" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/07/10/Webview - android에서 http프로토콜 접속하기/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/06/25/injectJavaScript의 사용/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/built-in/">built-in</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scope/">scope</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/디스크립터/">디스크립터</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/메서드/">메서드</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/빌트인/">빌트인</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/생성자함수/">생성자함수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스코프/">스코프</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스크립트언어/">스크립트언어</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/인스턴스/">인스턴스</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/자바스크립트-용어정리/">자바스크립트 용어정리</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/전역변수/">전역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/지역변수/">지역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴파일러/">컴파일러</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/프로토타입/">프로토타입</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/built-in/" style="font-size: 10px;">built-in</a> <a href="/tags/scope/" style="font-size: 10px;">scope</a> <a href="/tags/디스크립터/" style="font-size: 10px;">디스크립터</a> <a href="/tags/메서드/" style="font-size: 10px;">메서드</a> <a href="/tags/빌트인/" style="font-size: 10px;">빌트인</a> <a href="/tags/생성자함수/" style="font-size: 10px;">생성자함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/스크립트언어/" style="font-size: 10px;">스크립트언어</a> <a href="/tags/인스턴스/" style="font-size: 10px;">인스턴스</a> <a href="/tags/자바스크립트-용어정리/" style="font-size: 10px;">자바스크립트 용어정리</a> <a href="/tags/전역변수/" style="font-size: 10px;">전역변수</a> <a href="/tags/지역변수/" style="font-size: 10px;">지역변수</a> <a href="/tags/컴파일러/" style="font-size: 10px;">컴파일러</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/09/03/react-native-webwiew와 react-native-unimodules 화해해라/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/30/react-native-push-notification설치/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/29/react-native-push-notification 에러/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/28/AndroidX빌드 에러/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/06/Media가 삽입된 페이지 로딩 후 Status Bar가 사라지는 현상/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Yulia Lee<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

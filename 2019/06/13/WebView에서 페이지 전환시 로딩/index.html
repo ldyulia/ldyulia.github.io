@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>yulia&#39;s</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="WebView(WKWebView)에서 페이지 전환될 때 로딩 표시하기 12345678910111213141516171819202122232425262728293031323334353637383940414243import React, &amp;#123; Component &amp;#125; from &amp;apos;react&amp;apos;;import &amp;#123; View, Web">
+<meta property="og:type" content="article">
+<meta property="og:title" content="yulia&#39;s">
+<meta property="og:url" content="https://ldyulia.github.io/2019/06/13/WebView에서 페이지 전환시 로딩/index.html">
+<meta property="og:site_name" content="yulia&#39;s">
+<meta property="og:description" content="WebView(WKWebView)에서 페이지 전환될 때 로딩 표시하기 12345678910111213141516171819202122232425262728293031323334353637383940414243import React, &amp;#123; Component &amp;#125; from &amp;apos;react&amp;apos;;import &amp;#123; View, Web">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-06-13T09:34:39.937Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="yulia&#39;s">
+<meta name="twitter:description" content="WebView(WKWebView)에서 페이지 전환될 때 로딩 표시하기 12345678910111213141516171819202122232425262728293031323334353637383940414243import React, &amp;#123; Component &amp;#125; from &amp;apos;react&amp;apos;;import &amp;#123; View, Web">
+  
+    <link rel="alternate" href="/atom.xml" title="yulia&#39;s" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">yulia&#39;s</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ldyulia.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-WebView에서 페이지 전환시 로딩" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/13/WebView에서 페이지 전환시 로딩/" class="article-date">
+  <time datetime="2019-06-13T09:34:38.211Z" itemprop="datePublished">2019-06-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>WebView(WKWebView)에서 페이지 전환될 때 로딩 표시하기</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from &apos;react&apos;;</span><br><span class="line">import &#123; View, WebView, ActivityIndicator &#125; from &apos;react-native&apos;;</span><br><span class="line"></span><br><span class="line">export default class webviewWithLoading extends Component &#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.state = &#123; visible: true &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  hideSpinner=()=&gt; &#123;</span><br><span class="line">    this.setState(&#123; visible: false &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  showSpinner=()=&gt; &#123;</span><br><span class="line">    this.setState(&#123; visible: true &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;View style=&#123;&#123; flex: 1 &#125;&#125;&gt;</span><br><span class="line">        &lt;WebView</span><br><span class="line">          onLoadStart=&#123;() =&gt; (this.showSpinner())&#125;</span><br><span class="line">          onLoad=&#123;() =&gt; this.hideSpinner()&#125;</span><br><span class="line">          style=&#123;&#123; flex: 1 &#125;&#125;</span><br><span class="line">          source=&#123;&#123; uri: &apos;https://google.com&apos; &#125;&#125;</span><br><span class="line">        /&gt;</span><br><span class="line">        &#123;this.state.visible &amp;&amp; (</span><br><span class="line">          &lt;ActivityIndicator</span><br><span class="line">            style=&#123;&#123;</span><br><span class="line">            flex: 1,</span><br><span class="line">            left: 0,</span><br><span class="line">            right: 0,</span><br><span class="line">            top: 0,</span><br><span class="line">            bottom: 0,</span><br><span class="line">            position: &apos;absolute&apos;,</span><br><span class="line">            alignItems: &apos;center&apos;,</span><br><span class="line">            justifyContent: &apos;center&apos; &#125;&#125;</span><br><span class="line">            size=&quot;large&quot;</span><br><span class="line">          /&gt;</span><br><span class="line">        )&#125;</span><br><span class="line">      &lt;/View&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Referance : <a href="https://reactnativeforyou.com/how-to-add-activity-indicator-in-react-native-webview-to-show-progress/" target="_blank" rel="noopener">https://reactnativeforyou.com/how-to-add-activity-indicator-in-react-native-webview-to-show-progress/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ldyulia.github.io/2019/06/13/WebView에서 페이지 전환시 로딩/" data-id="ck08839v0000f8i0pfpd3m14k" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/06/14/WebView에 progress bar 달기/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/06/13/작업 리뷰/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/built-in/">built-in</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scope/">scope</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/디스크립터/">디스크립터</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/메서드/">메서드</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/빌트인/">빌트인</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/생성자함수/">생성자함수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스코프/">스코프</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스크립트언어/">스크립트언어</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/인스턴스/">인스턴스</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/자바스크립트-용어정리/">자바스크립트 용어정리</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/전역변수/">전역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/지역변수/">지역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴파일러/">컴파일러</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/프로토타입/">프로토타입</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/built-in/" style="font-size: 10px;">built-in</a> <a href="/tags/scope/" style="font-size: 10px;">scope</a> <a href="/tags/디스크립터/" style="font-size: 10px;">디스크립터</a> <a href="/tags/메서드/" style="font-size: 10px;">메서드</a> <a href="/tags/빌트인/" style="font-size: 10px;">빌트인</a> <a href="/tags/생성자함수/" style="font-size: 10px;">생성자함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/스크립트언어/" style="font-size: 10px;">스크립트언어</a> <a href="/tags/인스턴스/" style="font-size: 10px;">인스턴스</a> <a href="/tags/자바스크립트-용어정리/" style="font-size: 10px;">자바스크립트 용어정리</a> <a href="/tags/전역변수/" style="font-size: 10px;">전역변수</a> <a href="/tags/지역변수/" style="font-size: 10px;">지역변수</a> <a href="/tags/컴파일러/" style="font-size: 10px;">컴파일러</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/09/03/react-native-webwiew와 react-native-unimodules 화해해라/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/30/react-native-push-notification설치/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/29/react-native-push-notification 에러/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/28/AndroidX빌드 에러/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/06/Media가 삽입된 페이지 로딩 후 Status Bar가 사라지는 현상/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Yulia Lee<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
