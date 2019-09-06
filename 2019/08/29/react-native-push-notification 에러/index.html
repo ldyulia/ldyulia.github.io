@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>yulia&#39;s</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Android 널 어쩌면 좋을까..어제 react-native-webview 및 unimodules와 한 판 신나게 싸우고.. 오늘은 react-native-push-notification의 순서가 되었다.. 공식 문서(https://www.npmjs.com/package/react-native-push-notification)에서 시키는 대로 세팅을 하니">
+<meta property="og:type" content="article">
+<meta property="og:title" content="yulia&#39;s">
+<meta property="og:url" content="https://ldyulia.github.io/2019/08/29/react-native-push-notification 에러/index.html">
+<meta property="og:site_name" content="yulia&#39;s">
+<meta property="og:description" content="Android 널 어쩌면 좋을까..어제 react-native-webview 및 unimodules와 한 판 신나게 싸우고.. 오늘은 react-native-push-notification의 순서가 되었다.. 공식 문서(https://www.npmjs.com/package/react-native-push-notification)에서 시키는 대로 세팅을 하니">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-29T09:18:01.035Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="yulia&#39;s">
+<meta name="twitter:description" content="Android 널 어쩌면 좋을까..어제 react-native-webview 및 unimodules와 한 판 신나게 싸우고.. 오늘은 react-native-push-notification의 순서가 되었다.. 공식 문서(https://www.npmjs.com/package/react-native-push-notification)에서 시키는 대로 세팅을 하니">
+  
+    <link rel="alternate" href="/atom.xml" title="yulia&#39;s" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">yulia&#39;s</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ldyulia.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-react-native-push-notification 에러" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/29/react-native-push-notification 에러/" class="article-date">
+  <time datetime="2019-08-29T09:05:55.373Z" itemprop="datePublished">2019-08-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Android-널-어쩌면-좋을까"><a href="#Android-널-어쩌면-좋을까" class="headerlink" title="Android 널 어쩌면 좋을까.."></a>Android 널 어쩌면 좋을까..</h2><p>어제 react-native-webview 및 unimodules와 한 판 신나게 싸우고..</p>
+<p>오늘은 react-native-push-notification의 순서가 되었다..</p>
+<p>공식 문서(<a href="https://www.npmjs.com/package/react-native-push-notification)에서" target="_blank" rel="noopener">https://www.npmjs.com/package/react-native-push-notification)에서</a> 시키는 대로 세팅을 하니 아래의 에러를 끊임없이 던져주고 있음..</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt; Task :app:processDebugManifest FAILED</span><br><span class="line">/Users/mjkang/Desktop/rndoctorslide001/RNdoctorslide004/android/app/src/main/AndroidManifest.xml:22:18-91 Error:</span><br><span class="line">        Attribute application@appComponentFactory value=(android.support.v4.app.CoreComponentFactory) from [com.android.support:support-compat:28.0.0] AndroidManifest.xml:22:18-91</span><br><span class="line">        is also present at [androidx.core:core:1.0.0] AndroidManifest.xml:22:18-86 value=(androidx.core.app.CoreComponentFactory).</span><br><span class="line">        Suggestion: add &apos;tools:replace=&quot;android:appComponentFactory&quot;&apos; to &lt;application&gt; element at AndroidManifest.xml:28:5-46:19 to override.</span><br><span class="line"></span><br><span class="line">See http://g.co/androidstudio/manifest-merger for more information about the manifest merger.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">FAILURE: Build failed with an exception.</span><br><span class="line"></span><br><span class="line">* What went wrong:</span><br><span class="line">Execution failed for task &apos;:app:processDebugManifest&apos;.</span><br><span class="line">&gt; Manifest merger failed : Attribute application@appComponentFactory value=(android.support.v4.app.CoreComponentFactory) from [com.android.support:support-compat:28.0.0] AndroidManifest.xml:22:18-91</span><br><span class="line">        is also present at [androidx.core:core:1.0.0] AndroidManifest.xml:22:18-86 value=(androidx.core.app.CoreComponentFactory).</span><br><span class="line">        Suggestion: add &apos;tools:replace=&quot;android:appComponentFactory&quot;&apos; to &lt;application&gt; element at AndroidManifest.xml:28:5-46:19 to override.</span><br></pre></td></tr></table></figure>
+
+<p>후… AndroidManifest.xml파일에 수동으로 설정하는 부분에서 뭐가 잘못되었나 하고 빼봐도 계속 같은 오류가 반복되었다. 결국은 일단 모듈을 unlink해둔 상태.. 역시나 unlink하니 다시 잘만 빌드가 된다. 뭐가 문젠디 증말..</p>
+<p>+)</p>
+<p>아무래도 어제와 같이 AndroidX와의 호환문제인 듯해서 리액트네이티브 0.60버전으로 세팅해둔 프로젝트에 같은 모듈을 설치하고 빌드해봤다. 예상대로 아주 상큼하게 빌드성공^^… 시부렁탱구 </p>
+<p>다음은 0.60버전으로 빌드할 때 터미널에 뜨는 메시지의 일부이다. 힘들어서 외면했는데 jetifier를 공부할 때가 온 것 같다 후…</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">info Running jetifier to migrate libraries to AndroidX. You can disable it using &quot;--no-jetifier&quot; flag.</span><br><span class="line">Jetifier found 1085 file(s) to forward-jetify. Using 4 workers...</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ldyulia.github.io/2019/08/29/react-native-push-notification 에러/" data-id="ck087uwp3000lu20p7togbx6y" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/08/30/react-native-push-notification설치/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/28/AndroidX빌드 에러/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/built-in/">built-in</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scope/">scope</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/디스크립터/">디스크립터</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/메서드/">메서드</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/빌트인/">빌트인</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/생성자함수/">생성자함수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스코프/">스코프</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스크립트언어/">스크립트언어</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/인스턴스/">인스턴스</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/자바스크립트-용어정리/">자바스크립트 용어정리</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/전역변수/">전역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/지역변수/">지역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴파일러/">컴파일러</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/프로토타입/">프로토타입</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/built-in/" style="font-size: 10px;">built-in</a> <a href="/tags/scope/" style="font-size: 10px;">scope</a> <a href="/tags/디스크립터/" style="font-size: 10px;">디스크립터</a> <a href="/tags/메서드/" style="font-size: 10px;">메서드</a> <a href="/tags/빌트인/" style="font-size: 10px;">빌트인</a> <a href="/tags/생성자함수/" style="font-size: 10px;">생성자함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/스크립트언어/" style="font-size: 10px;">스크립트언어</a> <a href="/tags/인스턴스/" style="font-size: 10px;">인스턴스</a> <a href="/tags/자바스크립트-용어정리/" style="font-size: 10px;">자바스크립트 용어정리</a> <a href="/tags/전역변수/" style="font-size: 10px;">전역변수</a> <a href="/tags/지역변수/" style="font-size: 10px;">지역변수</a> <a href="/tags/컴파일러/" style="font-size: 10px;">컴파일러</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/09/03/react-native-webwiew와 react-native-unimodules 화해해라/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/30/react-native-push-notification설치/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/29/react-native-push-notification 에러/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/28/AndroidX빌드 에러/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/06/Media가 삽입된 페이지 로딩 후 Status Bar가 사라지는 현상/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Yulia Lee<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

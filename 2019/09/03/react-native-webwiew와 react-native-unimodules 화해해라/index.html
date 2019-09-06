@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>yulia&#39;s</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="react-native-webwiew와 react-native-unimodules 화해해라산 넘어 산이라고.. react-native-webview 최신버전은 androidx 사용을 요구하고, androidx를 사용하기 위해서는 grade.properties 파일을 다음과 같이 설정해 주어야 한다. 12android.useAndroidX=trueandroi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="yulia&#39;s">
+<meta property="og:url" content="https://ldyulia.github.io/2019/09/03/react-native-webwiew와 react-native-unimodules 화해해라/index.html">
+<meta property="og:site_name" content="yulia&#39;s">
+<meta property="og:description" content="react-native-webwiew와 react-native-unimodules 화해해라산 넘어 산이라고.. react-native-webview 최신버전은 androidx 사용을 요구하고, androidx를 사용하기 위해서는 grade.properties 파일을 다음과 같이 설정해 주어야 한다. 12android.useAndroidX=trueandroi">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-03T07:20:08.507Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="yulia&#39;s">
+<meta name="twitter:description" content="react-native-webwiew와 react-native-unimodules 화해해라산 넘어 산이라고.. react-native-webview 최신버전은 androidx 사용을 요구하고, androidx를 사용하기 위해서는 grade.properties 파일을 다음과 같이 설정해 주어야 한다. 12android.useAndroidX=trueandroi">
+  
+    <link rel="alternate" href="/atom.xml" title="yulia&#39;s" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">yulia&#39;s</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ldyulia.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-react-native-webwiew와 react-native-unimodules 화해해라" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/03/react-native-webwiew와 react-native-unimodules 화해해라/" class="article-date">
+  <time datetime="2019-09-03T07:20:08.507Z" itemprop="datePublished">2019-09-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="react-native-webwiew와-react-native-unimodules-화해해라"><a href="#react-native-webwiew와-react-native-unimodules-화해해라" class="headerlink" title="react-native-webwiew와 react-native-unimodules 화해해라"></a>react-native-webwiew와 react-native-unimodules 화해해라</h2><p>산 넘어 산이라고..</p>
+<p>react-native-webview 최신버전은 androidx 사용을 요구하고, androidx를 사용하기 위해서는 grade.properties 파일을 다음과 같이 설정해 주어야 한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">android.useAndroidX=true</span><br><span class="line">android.enableJetifier=true</span><br></pre></td></tr></table></figure>
+
+<p>그런데 문제는 이렇게 하는 순간 react-native-unimodules때문에 안드로이드 빌드가 안 된다는 거다….</p>
+<p>삽질에 삽질을 거듭하다 결국 타협한 게 react-native-webview 버전을 낮춰 설치하는 거였다. </p>
+<p>그리고 문제는 해결되는 듯했다</p>
+<p>그런데…</p>
+<p>망할놈의 애플에서 이제 아예 UIWebView 사용을 전면 제한하기로 한 모양이다.</p>
+<p>구버전 react-native-webview를 이용한 앱의 배포를 시도하자 다음과 같은 메일이 왔다.</p>
+<p><strong>ITMS-90809: Deprecated API Usage</strong> - Apple will stop accepting submissions of apps that use UIWebView APIs . See <a href="https://developer.apple.com/documentation/uikit/uiwebview" target="_blank" rel="noopener">https://developer.apple.com/documentation/uikit/uiwebview</a> for more information.</p>
+<p>After you’ve corrected the issues, you can use Xcode or Application Loader to upload a new binary to App Store Connect.</p>
+<p>후….</p>
+<p>이 문제를 해결하기 위해서는 1) 결국 androidx사용을 숙명으로 받아들이고 unimodules와 enableJetifier=true를 어떻게든 화해시켜본다, 2) 화해가 어렵다면 매뉴얼로라도 해결한다, 3) react-native-webview모듈의 UIWebView관련 파일을 모두 삭제한다</p>
+<p>음 셋 다 조까꾼</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ldyulia.github.io/2019/09/03/react-native-webwiew와 react-native-unimodules 화해해라/" data-id="ck087uwp5000ou20pbwrhf856" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/30/react-native-push-notification설치/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/built-in/">built-in</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scope/">scope</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/디스크립터/">디스크립터</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/메서드/">메서드</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/빌트인/">빌트인</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/생성자함수/">생성자함수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스코프/">스코프</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스크립트언어/">스크립트언어</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/인스턴스/">인스턴스</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/자바스크립트-용어정리/">자바스크립트 용어정리</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/전역변수/">전역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/지역변수/">지역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴파일러/">컴파일러</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/프로토타입/">프로토타입</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/built-in/" style="font-size: 10px;">built-in</a> <a href="/tags/scope/" style="font-size: 10px;">scope</a> <a href="/tags/디스크립터/" style="font-size: 10px;">디스크립터</a> <a href="/tags/메서드/" style="font-size: 10px;">메서드</a> <a href="/tags/빌트인/" style="font-size: 10px;">빌트인</a> <a href="/tags/생성자함수/" style="font-size: 10px;">생성자함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/스크립트언어/" style="font-size: 10px;">스크립트언어</a> <a href="/tags/인스턴스/" style="font-size: 10px;">인스턴스</a> <a href="/tags/자바스크립트-용어정리/" style="font-size: 10px;">자바스크립트 용어정리</a> <a href="/tags/전역변수/" style="font-size: 10px;">전역변수</a> <a href="/tags/지역변수/" style="font-size: 10px;">지역변수</a> <a href="/tags/컴파일러/" style="font-size: 10px;">컴파일러</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/09/03/react-native-webwiew와 react-native-unimodules 화해해라/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/30/react-native-push-notification설치/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/29/react-native-push-notification 에러/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/28/AndroidX빌드 에러/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/06/Media가 삽입된 페이지 로딩 후 Status Bar가 사라지는 현상/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Yulia Lee<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

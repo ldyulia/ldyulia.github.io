@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>yulia&#39;s</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="yulia&#39;s">
+<meta property="og:url" content="https://ldyulia.github.io/page/3/index.html">
+<meta property="og:site_name" content="yulia&#39;s">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="yulia&#39;s">
+  
+    <link rel="alternate" href="/atom.xml" title="yulia&#39;s" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">yulia&#39;s</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ldyulia.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-8장 주요용어 정리" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/10/8장 주요용어 정리/" class="article-date">
+  <time datetime="2019-01-09T15:53:44.000Z" itemprop="datePublished">2019-01-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/10/8장 주요용어 정리/">자바스크립트 용어정리 1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="컴파일러-Compiler"><a href="#컴파일러-Compiler" class="headerlink" title="컴파일러(Compiler)"></a>컴파일러(Compiler)</h4><p>어떤 프로그래밍 언어로 쓰여진 파일을 다른 언어로 바꿔주는 번역 프로그램. 대체로 고수준 언어를 기계어로 번역하는 프로그램을 의미. 프로그램을 작동시키기 위해서는 컴퓨터가 알아듣는 기계어로 작성을 해야하는데, 처음부터 기계어로 프로그래밍을 하기에는 너무 어렵고 비효율적. 따라서 인간에게 편리한 고수준의 추상화된 언어로 프로그래밍을 하면 이를 기계가 알아들을 수 있는 기계어로 번역하기 시작했고, 이 역할을 하는 도구가 바로 컴파일러다.</p>
+<h4 id="스크립트-언어"><a href="#스크립트-언어" class="headerlink" title="스크립트 언어"></a>스크립트 언어</h4><p>프로그래밍 언어의 한 종류. (컴파일 언어처럼) 컴파일 과정을 거치지 않고 소스코드를 한 줄 한 줄 바로바로 읽어 내려가는 <strong>인터프리터 방식</strong>의 언어. 프로그래밍 언어라고는 하지만 엄밀한 의미로 응용프로그램을 만드는 것 보다는, 기존에 존재하는 프로그램 위에서 구동되며 그 기존의 프로그램을 제어하기 위해 쓰인다. 웹 브라우저에서 구동되며 웹브라우저를 제어하기 위해 사용되는 자바스크립트가 대표적. </p>
+<h4 id="인스턴스-instance"><a href="#인스턴스-instance" class="headerlink" title="인스턴스(instance)"></a>인스턴스(instance)</h4><p>쉽게 말해 원본(프로토타입 객체)의 복사본이다. 복사본이기 때문에 원본의 속성(프로퍼티와 메소드)을 공유(상속)하면서도 개별적으로 추가된 다른 속성들을 가질 수 있다.</p>
+<h4 id="프로토타입-Prototype"><a href="#프로토타입-Prototype" class="headerlink" title="프로토타입(Prototype)"></a>프로토타입(Prototype)</h4><p>인스턴스(복사본)을 찍어내기 위해 만드는 원본 틀이라고 생각하면 쉽다.  자바스크립트의 클래스(Class)는 같은 프로토타입 객체로부터 프로퍼티를 상속받은 객체의 집합이다. 따라서 프로토타입 객체는 클래스의 핵심이라고 할 수 있다.</p>
+<h4 id="생성자-constructor-함수"><a href="#생성자-constructor-함수" class="headerlink" title="생성자(constructor)함수"></a>생성자(constructor)함수</h4><p>생성자는 새로 생성된 객체를 초기화하는 용도로 사용되는 함수다. 생성자는 new키워드를 사용하여 호출된다. 즉, new키워드 뒤에는 반드시 함수가 호출되어야 하는데, 이때 호출되는 함수를 생성자 함수라 하는 것이다. 아래의 코드는 자바스크립트에 기본적으로 내장된 생성자 함수이다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var o = new Object();</span><br><span class="line">var a = new Array();</span><br><span class="line">var d = new Date();</span><br><span class="line">var r = new RegExp();</span><br></pre></td></tr></table></figure>
+
+<p>위와같이 미리 내장된 생성자 뿐만 아니라 사용자가 원하는 형태의 객체를 생성하고 초기화하기 위해 임의의 생성자함수를 직접 정의할 수도 있다.</p>
+<p>클래스와 생성자 함수의 이름은 보통 대문자로 시작하는데(일반 함수와 메서드는 소문자로 시작), 이는 생성자 호출이 일반 함수 호출과 크게 다르기 때문이다. 생성자는 보통 new키워드를 사용하여 호출된다고 가정하기 때문에, 일반적인 함수 호출처럼 호출하면 보통 제대로 작동되지 않는다. 따라서 일반적인 함수와 구분되도록 작명 규칙을 지켜야 언제 new키워드를 이용해야 하는지 알 수 있다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//생성자 함수를 이용해 프로토타입을 생성</span><br><span class="line">ClassMate = function(name)&#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//프로토타입을 이용한 인스턴스들</span><br><span class="line">var ClassMate1 = new ClassMate(&apos;Kim&apos;);</span><br><span class="line">var ClassMate2 = new ClassMate(&apos;Lee&apos;);</span><br><span class="line">...</span><br><span class="line">var ClassMate5 = new ClassMate(&apos;Park&apos;);</span><br><span class="line">//이와같이 수많은 인스턴스 생성 가능</span><br></pre></td></tr></table></figure>
+
+<h4 id="함수와-메서드"><a href="#함수와-메서드" class="headerlink" title="함수와 메서드"></a>함수와 메서드</h4><p>객체란 <strong>서로 연관된 변수와 함수를 그룹핑</strong>한 것이라고 볼 수 있다. 즉, 객체 내의 변수를 <strong>프로퍼티 네임(속성 또는 속성 이름)</strong>이라 하고, 이 프로퍼티 네임이 가진 속성 값(value)이 함수일 때, 이 함수를 <strong>메서드</strong>라 부르는 것이다. </p>
+<p>쉽게 말해 메서드는 객체가 가지고 있는 동작이라고 보면 된다. 함수와 구분하여 부르는 이유는, 메서드는 반드시 *<em>객체를 통해서만 *</em>동작을 수행할 수 있기 때문이다. 즉, 동작 수행의 주체가 객체인 셈이다. </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ldyulia.github.io/2019/01/10/8장 주요용어 정리/" data-id="ck087uwoe0001u20pj7so1kmx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/메서드/">메서드</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/생성자함수/">생성자함수</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/스크립트언어/">스크립트언어</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/인스턴스/">인스턴스</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/자바스크립트-용어정리/">자바스크립트 용어정리</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/컴파일러/">컴파일러</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/프로토타입/">프로토타입</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-전역변수와 지역변수" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/08/전역변수와 지역변수/" class="article-date">
+  <time datetime="2019-01-08T08:08:45.000Z" itemprop="datePublished">2019-01-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/08/전역변수와 지역변수/">전역변수와 지역변수 그리고 객체지향프로그래밍까지</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>프로그래밍을 할 때, 같은이름의 변수 사용으로 코드가 꼬이는 경우가 빈발한다. 이를 해결하기 위해 나온 개념이 바로 전역변수와 지역변수 개념. 쉽게 말해 폴더정리를 하는 것과 같은 것이다. 같은 폴더 안에서는 같은 이름을 가진 파일이 존재할 수 없지만(덮어쓰기 되어버림), 서로 다른 폴더 안에서는 같은 이름을 가진 파일이 존재해도 상관없다. 그리고 이런 흐름으로, 문제 해결을 위해 발전해온 것이 바로 ‘객체지향 프로그래밍’이다. </p>
+<hr>
+<h3 id="스코프-scope"><a href="#스코프-scope" class="headerlink" title="스코프(scope)"></a>스코프(scope)</h3><p>scope = 유효범위 : 변수의 수명</p>
+<p><strong>전역변수(global) :</strong>  코드 전역에서 접근 가능한 변수</p>
+<p><strong>지역변수(local) :</strong> 함수 안에서 생성되고 함수 안에서만 접근 가능한 변수 (자바스크립트의 지역변수는 함수 안에서만 생성 가능하다. for문이나 if문 등에서 생성된 변수는 지역변수로 기능하지 못함)</p>
+<p><em>cf) ES5에서 사용되던 var는 스코프가 함수단위이지만, ES6부터 도입된 const와 let은 스코프가 블록단위이다.</em> </p>
+<p>반드시 전역변수를 써야 하는 특별한 이유가 없는 한 지역변수를 써야 한다. </p>
+<p>그러나 불가피하게 전역변수를 써야 할 경우 다음과 같이 객체를 이용해 전역변수를 만들고 관리한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var MYAPP = &#123;&#125; //전역변수 MYAPP은 객체</span><br><span class="line">MYAPP.calculator = &#123; //calculator는 MYAPP의 속성이고, calculator의 값 또한 객체</span><br><span class="line">    &apos;left&apos; : null,</span><br><span class="line">    &apos;right&apos; : null</span><br><span class="line">&#125;</span><br><span class="line">MYAPP.coordinate = &#123;</span><br><span class="line">    &apos;left&apos; : null,</span><br><span class="line">    &apos;right&apos; : null</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">MYAPP.calculator.left = 10;</span><br><span class="line">MYAPP.calculator.right = 20;</span><br><span class="line">function sum()&#123;</span><br><span class="line">    return MYAPP.calculator.left + MYAPP.calculator.right;</span><br><span class="line">&#125;</span><br><span class="line">document.write(sum()); //30</span><br></pre></td></tr></table></figure>
+
+<p>위와 같이 코드를 작성하면 MYAPP이라는 전역변수 하나만을 생성하여 그 안에 필요한 다른 변수(=속성 : 객체 안에 들어있는 변수를 속성이라 부른다)를 지정하는 식으로 관리할 수 있다.  즉 MYAPP이라는 단 하나의 전역변수 안에 자신이 필요한 다른 전역변수들을 넣어놓음으로써 코드 충돌을 방지할 수 있는 것이다. </p>
+<p>만약 위와 같이 MYAPP이라는 전역변수 하나 조차 사용하고싶지 않다면 아래와 같이 익명함수를 이용하여 작성하면 된다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">(function()&#123;</span><br><span class="line">    var MYAPP = &#123;&#125; //MYAPP은 익명함수의 지역변수가 됨</span><br><span class="line">    MYAPP.calculator = &#123; </span><br><span class="line">        &apos;left&apos; : null,</span><br><span class="line">        &apos;right&apos; : null</span><br><span class="line">    &#125;</span><br><span class="line">    MYAPP.coordinate = &#123;</span><br><span class="line">        &apos;left&apos; : null,</span><br><span class="line">        &apos;right&apos; : null</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    MYAPP.calculator.left = 10;</span><br><span class="line">    MYAPP.calculator.right = 20;</span><br><span class="line">    function sum()&#123;</span><br><span class="line">        return MYAPP.calculator.left + MYAPP.calculator.right;</span><br><span class="line">    &#125;</span><br><span class="line">    document.write(sum()); //30</span><br><span class="line">&#125;()) //익명함수 생성 뒤 바로 호출</span><br></pre></td></tr></table></figure>
+
+<p>위와 같은 방식은 제이쿼리를 비롯한 수많은 라이브러리에서 모듈화를 시킬 때 자주 사용하는 기법이다.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ldyulia.github.io/2019/01/08/전역변수와 지역변수/" data-id="ck087uwp8000uu20piyasfi6x" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scope/">scope</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/스코프/">스코프</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/전역변수/">전역변수</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/지역변수/">지역변수</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-API에 대해 공부하다 알게 된 새삼스러운 사실" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/06/API에 대해 공부하다 알게 된 새삼스러운 사실/" class="article-date">
+  <time datetime="2019-01-06T07:18:17.000Z" itemprop="datePublished">2019-01-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/06/API에 대해 공부하다 알게 된 새삼스러운 사실/">API에 대해 공부하다 알게 된 새삼스러운 사실</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="API-Application-Programing-Interface"><a href="#API-Application-Programing-Interface" class="headerlink" title="API : Application Programing Interface"></a>API : Application Programing Interface</h4><p>UI(User Interface)가 일반 사용자가 시스템을 제어할 수 있게 해주는 인터페이스(버튼, 경고박스 등)라면, API는 개발자들이 시스템을 제어할 수 있게 해주는 인터페이스(경고창을 웹브라우저에 띄울 수 있게 해주는 명령어 alert 등)</p>
+<p>라는 것 까지는 놀라울 거 하나 없는 사전적 지식이었는데 그래서 대체 Application과 Interface는 무엇인가에 대해서는 한 번도 생각해본 적 없어서 깨닫고 난 뒤 매우.. 새삼스러웠다.</p>
+<p>일단 일상에서 별 생각없이 응용프로그램 응용프로그램 어플리케이션 어플리케이션 소리를 잘도 나불대고 다녔으면서도 실은 응용프로그램 = Application의 한국식 이름 이라는 것까지는 생각해본 적 없었고..</p>
+<p>그래서 대체 뭐가 뭐를 응용한다는 건지..? 까지는 당연히 생각해봤을 리가 없다</p>
+<h4 id="그래서-대체-뭐가-뭐를-응용한단-말인가"><a href="#그래서-대체-뭐가-뭐를-응용한단-말인가" class="headerlink" title="그래서 대체 뭐가 뭐를 응용한단 말인가?"></a>그래서 대체 뭐가 뭐를 응용한단 말인가?</h4><p>근까 쉽게 말해 이런 거였다</p>
+<ol>
+<li>사용자가 웹브라우저를 이용하기 위해서는</li>
+<li>웹개발자들이 웹을 구현해줘야 하고</li>
+<li>웹개발자들이 웹을 구현하기 위해서는 브라우저 개발자들이 브라우저를 만들어줘야 하고</li>
+<li>브라우저 개발자들이 브라우저를 만들기 위해서는 운영체제 개발자들이 운영체제를 만들어줘야하고</li>
+<li>… 아무튼 이런 식으로 쭉쭉 아래까지 내려가다보면 전자공학도 만나고 전기공학까지 만나게 된다</li>
+</ol>
+<p>프로그래밍은 사실 위와 같이 계층적인 구조로 이루어져 있는데 각각의 영역이 맞닿는 지점을 바로 Interface라고 한다는 거다..! 그리고 웹개발자는 브라우저를 ‘응용’해서 프로그래밍을 하고, 브라우저 개발자는 운영체제를 ‘응용’해서 프로그래밍을 하기 때문에 ‘응용프로그램’이라고 한다는 거였다! </p>
+<p>즉,  어떤 기반프로그램의 인터페이스를 이용해 응용프로그램을 만들고, 이 응용프로그램이 또 다른 응용프로그램의 기반프로그램이 되는 식으로 계층적으로 연결이 되는 것이다. WOW</p>
+<p>정말 새삼스러운 사실이었음을..</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ldyulia.github.io/2019/01/06/API에 대해 공부하다 알게 된 새삼스러운 사실/" data-id="ck087uwoh0002u20pqyb5wyu2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/built-in/">built-in</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scope/">scope</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/디스크립터/">디스크립터</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/메서드/">메서드</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/빌트인/">빌트인</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/생성자함수/">생성자함수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스코프/">스코프</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스크립트언어/">스크립트언어</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/인스턴스/">인스턴스</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/자바스크립트-용어정리/">자바스크립트 용어정리</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/전역변수/">전역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/지역변수/">지역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴파일러/">컴파일러</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/프로토타입/">프로토타입</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/built-in/" style="font-size: 10px;">built-in</a> <a href="/tags/scope/" style="font-size: 10px;">scope</a> <a href="/tags/디스크립터/" style="font-size: 10px;">디스크립터</a> <a href="/tags/메서드/" style="font-size: 10px;">메서드</a> <a href="/tags/빌트인/" style="font-size: 10px;">빌트인</a> <a href="/tags/생성자함수/" style="font-size: 10px;">생성자함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/스크립트언어/" style="font-size: 10px;">스크립트언어</a> <a href="/tags/인스턴스/" style="font-size: 10px;">인스턴스</a> <a href="/tags/자바스크립트-용어정리/" style="font-size: 10px;">자바스크립트 용어정리</a> <a href="/tags/전역변수/" style="font-size: 10px;">전역변수</a> <a href="/tags/지역변수/" style="font-size: 10px;">지역변수</a> <a href="/tags/컴파일러/" style="font-size: 10px;">컴파일러</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/09/03/react-native-webwiew와 react-native-unimodules 화해해라/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/30/react-native-push-notification설치/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/29/react-native-push-notification 에러/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/28/AndroidX빌드 에러/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/06/Media가 삽입된 페이지 로딩 후 Status Bar가 사라지는 현상/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Yulia Lee<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
