@@ -62,6 +62,43 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Webview - android에서 http프로토콜 접속하기" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/10/Webview - android에서 http프로토콜 접속하기/" class="article-date">
+  <time datetime="2019-07-10T06:48:42.500Z" itemprop="datePublished">2019-07-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="React-Native-Android에서-http프로토콜-접속-ERR-CLEARTEXT-NOT-PERMITTED"><a href="#React-Native-Android에서-http프로토콜-접속-ERR-CLEARTEXT-NOT-PERMITTED" class="headerlink" title="(React Native) Android에서 http프로토콜 접속 (ERR CLEARTEXT NOT PERMITTED)"></a>(React Native) Android에서 http프로토콜 접속 (ERR CLEARTEXT NOT PERMITTED)</h2><p>React Native 웹뷰로 웹앱 작업을 하는 중.. 안드로이드에서는 http프로토콜 접속이 제한되는 문제가 발생했다.</p>
+<p>보안은 ios쪽이 더 빡셀 거라 생각을 했는데 ㅂㄷ..</p>
+<p>해결은 구글 신을 통해 의외로 쉽게 됐다</p>
+<p>일단 참고한 포스팅 : <a href="https://developside.tistory.com/85" target="_blank" rel="noopener">https://developside.tistory.com/85</a></p>
+<p>내 경우 방법 1을 통해 문제를 해결했다. 아래는 위 포스팅의 해결 방법 1</p>
+<h4 id="1-AndroidManifest-xml-파일의-부분에-android-usesCleartextTraffic-”true”-로-설정"><a href="#1-AndroidManifest-xml-파일의-부분에-android-usesCleartextTraffic-”true”-로-설정" class="headerlink" title="1. AndroidManifest.xml 파일의  부분에 android:usesCleartextTraffic=”true” 로 설정"></a>1. AndroidManifest.xml 파일의 <application> 부분에 android:usesCleartextTraffic=”true” 로 설정</application></h4><p>cleartext HTTP와 같은 cleartext 네트워크 트래픽을 사용할지 여부를 나타내는 flag로 이 플래그가 flase 로 되어 있으면, 플랫폼 구성 요소 (예 : HTTP 및 FTP 스택, DownloadManager, MediaPlayer)는 일반 텍스트 트래픽 사용에 대한 앱의 요청을 거부하게 됩니다.</p>
+<p>이 flag를 설정하게 되면 모든 cleartext 트래픽은 허용처리가 됩니다.</p>
+<p><strong><em>실제 적용 코드</em></strong> (AndroidManifest.xml 파일 내)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;application</span><br><span class="line">      ...</span><br><span class="line">      android:usesCleartextTraffic=&quot;true&quot;&gt; //이 부분을 추가해주었다</span><br></pre></td></tr></table></figure>
+
+<p>+) cleartext란? 암호화 하지 않은 평문을 의미한다. 따라서 http와 같이 보안수준이 낮은 페이지도 여기 해당하는듯(?)</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ldyulia.github.io/2019/07/10/Webview - android에서 http프로토콜 접속하기/" data-id="ck0ui4oby000ina0p2yzzs71q" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-(React Native) WebView에서 pop up처리를 위해 했던 삽질들" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/06/28/(React Native) WebView에서 pop up처리를 위해 했던 삽질들/" class="article-date">
@@ -98,7 +135,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/06/28/(React Native) WebView에서 pop up처리를 위해 했던 삽질들/" data-id="ck0eocfng0000ss0p2ca5x5en" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/06/28/(React Native) WebView에서 pop up처리를 위해 했던 삽질들/" data-id="ck0ui4ob00000na0pslqmj999" class="article-share-link">Share</a>
       
       
     </footer>
@@ -156,7 +193,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/06/25/injectJavaScript의 사용/" data-id="ck0eocfoe000jss0papfn1jqb" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/06/25/injectJavaScript의 사용/" data-id="ck0ui4oc2000mna0pajikpwyt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -186,7 +223,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/06/20/window.location/" data-id="ck0eocfoh000nss0p6ua7wvcj" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/06/20/window.location/" data-id="ck0ui4oc5000pna0pas1l5bpz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -215,7 +252,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/06/14/WebView에 progress bar 달기/" data-id="ck0eocfo6000ass0pb20ckc1f" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/06/14/WebView에 progress bar 달기/" data-id="ck0ui4obo000bna0pvjjg6ap8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -245,7 +282,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/06/13/WebView에서 페이지 전환시 로딩/" data-id="ck0eocfo9000dss0pyt7uwhkj" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/06/13/WebView에서 페이지 전환시 로딩/" data-id="ck0ui4obu000ena0p69qcsx8b" class="article-share-link">Share</a>
       
       
     </footer>
@@ -279,7 +316,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/06/13/작업 리뷰/" data-id="ck0eocfoi000oss0pjeljyc33" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/06/13/작업 리뷰/" data-id="ck0ui4ocb000wna0pg6o3wyji" class="article-share-link">Share</a>
       
       
     </footer>
@@ -319,7 +356,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/06/11/WebView에서 social login처리/" data-id="ck0eocfo8000bss0pb3zhe0id" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/06/11/WebView에서 social login처리/" data-id="ck0ui4obv000fna0pgldft9rz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -386,7 +423,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/06/11/WebView페이지 뒤로가기(onNavigationStateChange)/" data-id="ck0eocfoa000ess0pevpuo12c" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/06/11/WebView페이지 뒤로가기(onNavigationStateChange)/" data-id="ck0ui4oc1000lna0pl066e5zm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -571,55 +608,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/02/12/Object 오브젝트/" data-id="ck0eocfov001css0phdqj2scz" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/02/12/Object 오브젝트/" data-id="ck0ui4ock001lna0piu1s8gs6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/디스크립터/">디스크립터</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-빌트인" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/01/11/빌트인/" class="article-date">
-  <time datetime="2019-01-10T15:56:52.000Z" itemprop="datePublished">2019-01-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/11/빌트인/">빌트인(built-in)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>전형적인 객체지향 프로그램에서 특정 오브젝트에 속한 메서드를 호출하기 위해서는 아래와 같이 먼저 오브젝트 생성을 해주어야 한다. </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//예를 들어 concat메서드의 경우 String오브젝트와 Array오브젝트의 메서드로 존재한다.</span><br><span class="line">//전형적인 객체지향 방식으로 각각의 오브젝트의 메서드를 불러오는 방법은 아래와 같다.</span><br><span class="line"></span><br><span class="line">var obj = new String(); //String 오브젝트 생성</span><br><span class="line">var result = obj.concat(&apos;sports&apos;,&apos;soccer&apos;,11); //String오브젝트의 메서드인 concat메서드 호출</span><br><span class="line">console.log(result); //실행결과 : sportsoccer11</span><br><span class="line"></span><br><span class="line">var obj = new Array(); //Array오브젝트 생성</span><br><span class="line">var result = obj.concat(&apos;sports&apos;,&apos;soccer&apos;,11); //Array오브젝트의 메서드인 concat메서드 호출</span><br><span class="line">console.log(result); //실행결과 : [sports,soccer,11]</span><br></pre></td></tr></table></figure>
-
-<p>그러나 자바스크립트는 렌더링 단계에서 해당 오브젝트들(String, Array 등)을 먼저 생성해두기 때문에 위와 같이 해당 오브젝트를 일일이 생성할 필요가 없다. 이와 같은 오브젝트를 빌트인 오브젝트라고 한다. </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//빌트인 오브젝트 덕분에 오브젝트를 일일이 생성할 필요가 없기 때문에 아래와 같이 작성할 수 있다.</span><br><span class="line"></span><br><span class="line">var result = &apos;sports&apos;.concat(&apos;soccer&apos;,11); //&apos;sports&apos;를 자동으로 문자열로 인식</span><br><span class="line">console.log(result); // 실행결과 : sportssoccer11</span><br><span class="line"></span><br><span class="line">result = [&apos;sports&apos;].concat(&apos;soccer&apos;,11); //[&apos;sports&apos;]를 자동으로 배열로 인식</span><br><span class="line">console.log(result); //실행결과 : [&apos;sports&apos;,&apos;soccer&apos;,11]</span><br></pre></td></tr></table></figure>
-
-<p>이처럼 사용자가 일일이 세팅해주지 않아도 사용할 수 있도록 자바스크립트 렌더링 단계에서 미리 만들어지는 모든 것을 총칭하는 것이 바로 <strong>빌트인</strong>이다. 이러한 빌트인에는 크게 <strong>연산자, 데이터타입, 오브젝트</strong>가 있다.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/01/11/빌트인/" data-id="ck0eocfoj000qss0p46wpckpo" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/built-in/">built-in</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/빌트인/">빌트인</a></li></ul>
 
     </footer>
   </div>
@@ -646,7 +638,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/built-in/">built-in</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scope/">scope</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/디스크립터/">디스크립터</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/메서드/">메서드</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/빌트인/">빌트인</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/생성자함수/">생성자함수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스코프/">스코프</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스크립트언어/">스크립트언어</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/인스턴스/">인스턴스</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/자바스크립트-용어정리/">자바스크립트 용어정리</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/전역변수/">전역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/지역변수/">지역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴파일러/">컴파일러</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/프로토타입/">프로토타입</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode-11/">Xcode 11</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/built-in/">built-in</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-native/">react native</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scope/">scope</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/디스크립터/">디스크립터</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/메서드/">메서드</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/빌트인/">빌트인</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/생성자함수/">생성자함수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스코프/">스코프</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스크립트언어/">스크립트언어</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/인스턴스/">인스턴스</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/자바스크립트-용어정리/">자바스크립트 용어정리</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/전역변수/">전역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/지역변수/">지역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴파일러/">컴파일러</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/프로토타입/">프로토타입</a></li></ul>
     </div>
   </div>
 
@@ -656,7 +648,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/built-in/" style="font-size: 10px;">built-in</a> <a href="/tags/scope/" style="font-size: 10px;">scope</a> <a href="/tags/디스크립터/" style="font-size: 10px;">디스크립터</a> <a href="/tags/메서드/" style="font-size: 10px;">메서드</a> <a href="/tags/빌트인/" style="font-size: 10px;">빌트인</a> <a href="/tags/생성자함수/" style="font-size: 10px;">생성자함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/스크립트언어/" style="font-size: 10px;">스크립트언어</a> <a href="/tags/인스턴스/" style="font-size: 10px;">인스턴스</a> <a href="/tags/자바스크립트-용어정리/" style="font-size: 10px;">자바스크립트 용어정리</a> <a href="/tags/전역변수/" style="font-size: 10px;">전역변수</a> <a href="/tags/지역변수/" style="font-size: 10px;">지역변수</a> <a href="/tags/컴파일러/" style="font-size: 10px;">컴파일러</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a>
+      <a href="/tags/Xcode/" style="font-size: 10px;">Xcode</a> <a href="/tags/Xcode-11/" style="font-size: 10px;">Xcode 11</a> <a href="/tags/built-in/" style="font-size: 10px;">built-in</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/react-native/" style="font-size: 10px;">react native</a> <a href="/tags/scope/" style="font-size: 10px;">scope</a> <a href="/tags/디스크립터/" style="font-size: 10px;">디스크립터</a> <a href="/tags/메서드/" style="font-size: 10px;">메서드</a> <a href="/tags/빌트인/" style="font-size: 10px;">빌트인</a> <a href="/tags/생성자함수/" style="font-size: 10px;">생성자함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/스크립트언어/" style="font-size: 10px;">스크립트언어</a> <a href="/tags/인스턴스/" style="font-size: 10px;">인스턴스</a> <a href="/tags/자바스크립트-용어정리/" style="font-size: 10px;">자바스크립트 용어정리</a> <a href="/tags/전역변수/" style="font-size: 10px;">전역변수</a> <a href="/tags/지역변수/" style="font-size: 10px;">지역변수</a> <a href="/tags/컴파일러/" style="font-size: 10px;">컴파일러</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a>
     </div>
   </div>
 
@@ -678,6 +670,10 @@
       <ul>
         
           <li>
+            <a href="/2019/09/22/Xcode-11-Error-Multiple-commands-produce/">Xcode 11 Error: Multiple commands produce</a>
+          </li>
+        
+          <li>
             <a href="/2019/09/03/react-native-webwiew와 react-native-unimodules 화해해라/">(no title)</a>
           </li>
         
@@ -691,10 +687,6 @@
         
           <li>
             <a href="/2019/08/28/AndroidX빌드 에러/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/06/Media가 삽입된 페이지 로딩 후 Status Bar가 사라지는 현상/">(no title)</a>
           </li>
         
       </ul>

@@ -5,19 +5,15 @@
   
 
   
-  <title>yulia&#39;s</title>
+  <title>Tag: Xcode 11 | yulia&#39;s</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Media가 삽입된 페이지 로딩 후 Status Bar가 사라지는 현상같은 문제가 개발 초기에 한 번, 후반에 한 번 발생했다. 초반의 것은 full screen media가 재생되고 난 뒤의 것으로 굳이 full screen media를 이용할 필요 없기에 다음과 같이 react-native-webview모듈의 프로퍼티 값을 설정하여 해결했다. 12345">
-<meta property="og:type" content="article">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="yulia&#39;s">
-<meta property="og:url" content="https://ldyulia.github.io/2019/08/06/Media가 삽입된 페이지 로딩 후 Status Bar가 사라지는 현상/index.html">
+<meta property="og:url" content="https://ldyulia.github.io/tags/Xcode-11/index.html">
 <meta property="og:site_name" content="yulia&#39;s">
-<meta property="og:description" content="Media가 삽입된 페이지 로딩 후 Status Bar가 사라지는 현상같은 문제가 개발 초기에 한 번, 후반에 한 번 발생했다. 초반의 것은 full screen media가 재생되고 난 뒤의 것으로 굳이 full screen media를 이용할 필요 없기에 다음과 같이 react-native-webview모듈의 프로퍼티 값을 설정하여 해결했다. 12345">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-06T04:51:30.049Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="yulia&#39;s">
-<meta name="twitter:description" content="Media가 삽입된 페이지 로딩 후 Status Bar가 사라지는 현상같은 문제가 개발 초기에 한 번, 후반에 한 번 발생했다. 초반의 것은 full screen media가 재생되고 난 뒤의 것으로 굳이 full screen media를 이용할 필요 없기에 다음과 같이 react-native-webview모듈의 프로퍼티 값을 설정하여 해결했다. 12345">
   
     <link rel="alternate" href="/atom.xml" title="yulia&#39;s" type="application/atom+xml">
   
@@ -64,60 +60,40 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Media가 삽입된 페이지 로딩 후 Status Bar가 사라지는 현상" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/06/Media가 삽입된 페이지 로딩 후 Status Bar가 사라지는 현상/" class="article-date">
-  <time datetime="2019-08-06T04:51:30.048Z" itemprop="datePublished">2019-08-06</time>
+        <section id="main">
+  
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2019/09/22/Xcode-11-Error-Multiple-commands-produce/" class="archive-article-date">
+  <time datetime="2019-09-22T04:37:35.000Z" itemprop="datePublished">Sep 22</time>
 </a>
-    
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/09/22/Xcode-11-Error-Multiple-commands-produce/">Xcode 11 Error: Multiple commands produce</a>
+    </h1>
+  
+
+    </header>
   </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Media가-삽입된-페이지-로딩-후-Status-Bar가-사라지는-현상"><a href="#Media가-삽입된-페이지-로딩-후-Status-Bar가-사라지는-현상" class="headerlink" title="Media가 삽입된 페이지 로딩 후 Status Bar가 사라지는 현상"></a>Media가 삽입된 페이지 로딩 후 Status Bar가 사라지는 현상</h3><p>같은 문제가 개발 초기에 한 번, 후반에 한 번 발생했다.</p>
-<p>초반의 것은 full screen media가 재생되고 난 뒤의 것으로 굳이 full screen media를 이용할 필요 없기에 다음과 같이 react-native-webview모듈의 프로퍼티 값을 설정하여 해결했다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">import &#123;WebView&#125; from &apos;react-native-webview&apos;</span><br><span class="line"></span><br><span class="line">&lt;WebVeiw </span><br><span class="line">	...</span><br><span class="line">	allowsInlineMediaPlayback=&#123;true&#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
-
-<p>그리고 이걸로 해결된 줄 알았는데 개발 후반에 같은 증상이 또!! 나타났다..</p>
-<p>알고보니 LauchScreen을 새로 설정하면서 (xcode에서) View controller를 새로 만들었는데 아마도 이 View controller의 기본값 중에 Status bar를 건드리는 게 있었던 모양이다.</p>
-<p>이 문제는 info.plist에서 View controller-based status bar appearance 값을 YES로 바꿔주니까 해결이 됐다.</p>
-<p>같은 증상이 개발 초반에 한 번, 후반에 한 번 발생했다.</p>
-<p>media가 full screen으로 재생되고 나면 발생하는 오류인 듯했다. full screen media를 사용할 필요 없기에 이 경우엔 allowsInlineMediaPlayback={true}</p>
-<p>Info.plist에서 </p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/08/06/Media가 삽입된 페이지 로딩 후 Status Bar가 사라지는 현상/" data-id="ck0ui4obn0009na0p4vr70nk3" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2019/08/28/AndroidX빌드 에러/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2019/07/23/Expo 시뮬레이터 오류(네트워크에 접속하지 못할 때)/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title"></div>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
+
 
 </section>
         

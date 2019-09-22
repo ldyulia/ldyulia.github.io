@@ -62,6 +62,56 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Xcode-11-Error-Multiple-commands-produce" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/22/Xcode-11-Error-Multiple-commands-produce/" class="article-date">
+  <time datetime="2019-09-22T04:37:35.000Z" itemprop="datePublished">2019-09-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/22/Xcode-11-Error-Multiple-commands-produce/">Xcode 11 Error: Multiple commands produce</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Xcode-11로-업그레이드-직후-build-failed-Multipel-commands-produce"><a href="#Xcode-11로-업그레이드-직후-build-failed-Multipel-commands-produce" class="headerlink" title="Xcode 11로 업그레이드 직후 build failed : Multipel commands produce"></a>Xcode 11로 업그레이드 직후 build failed : Multipel commands produce</h2><p>iOS13이 릴리즈되고 xcode도 그에 맞춰 11로 업그레이드가 됐다</p>
+<p>불안해서 업그레이드 바로 안 하고 싶었지만 똥멍청이같이 바로 해버렸음^^; 성질 급함^^;</p>
+<p>그리고 아니나 다를까 업그레이드 하자마자 16개의 에러를 뱉어내며 장렬히 build failed!!</p>
+<p>코드나 다른 세팅을 건드린 적이 없기 때문에 xcode업그레이드에 따른 에러임이 분명했다 왜냐면 그저께까지 잘 돌아갔거든ㅎ</p>
+<p>확인을 위해 xcode - file - workspace setting에서 build system을 legacy build system으로 변경하고 다시 빌드를 해봤다. 역시 이상없이 잘 빌드됨..</p>
+<p>ㅎ..</p>
+<p>순간 고민했다</p>
+<p>그냥 일단 이대로 두고 계속 작업할까ㅎㅎㅎ..</p>
+<p>근데 어차피 언젠가는 운명에 순응하고 고쳐야 할 거 같았다 에휴</p>
+<p>보니까 새로운 os가 릴리즈되는 시기인 가을 쯤에 대부분의 개발자커뮤니티에서 올라오는 질문들인 거 같았다</p>
+<p>다행히 내 경우 답변은 작년 xcode10업데이트 때의 질답에서 쉽게 찾을 수 있었음 : <a href="https://stackoverflow.com/questions/50718018/xcode-10-error-multiple-commands-produce" target="_blank" rel="noopener">https://stackoverflow.com/questions/50718018/xcode-10-error-multiple-commands-produce</a></p>
+<p>마찬가지로 해당 타겟의 Build Phases - Copy Bundle Resources에서 문제가 된 항목들을 모두 삭제하니 다행히 정상적으로 빌드가 되었다. </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ldyulia.github.io/2019/09/22/Xcode-11-Error-Multiple-commands-produce/" data-id="ck0ui4obx000hna0p67gal8nd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode-11/">Xcode 11</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-native/">react native</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-react-native-webwiew와 react-native-unimodules 화해해라" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/03/react-native-webwiew와 react-native-unimodules 화해해라/" class="article-date">
@@ -93,7 +143,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/09/03/react-native-webwiew와 react-native-unimodules 화해해라/" data-id="ck0eocfog000mss0pp5xy1x2d" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/09/03/react-native-webwiew와 react-native-unimodules 화해해라/" data-id="ck0ui4oca000tna0pvrt4lmie" class="article-share-link">Share</a>
       
       
     </footer>
@@ -125,7 +175,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/08/30/react-native-push-notification설치/" data-id="ck0eocfof000kss0p1ch8vbya" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/08/30/react-native-push-notification설치/" data-id="ck0ui4oc0000jna0pbbzum69a" class="article-share-link">Share</a>
       
       
     </footer>
@@ -162,7 +212,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/08/29/react-native-push-notification 에러/" data-id="ck0eocfod000hss0p3objx1cs" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/08/29/react-native-push-notification 에러/" data-id="ck0ui4oc4000ona0p8mv1mo7s" class="article-share-link">Share</a>
       
       
     </footer>
@@ -221,7 +271,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/08/28/AndroidX빌드 에러/" data-id="ck0eocfnp0002ss0p6nnx137y" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/08/28/AndroidX빌드 에러/" data-id="ck0ui4obi0004na0pjk0rt3gw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -257,7 +307,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/08/06/Media가 삽입된 페이지 로딩 후 Status Bar가 사라지는 현상/" data-id="ck0eocfnt0005ss0p30t6548q" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/08/06/Media가 삽입된 페이지 로딩 후 Status Bar가 사라지는 현상/" data-id="ck0ui4obn0009na0p4vr70nk3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -295,7 +345,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/07/23/Expo 시뮬레이터 오류(네트워크에 접속하지 못할 때)/" data-id="ck0eocfnv0007ss0pn4jp1q9y" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/07/23/Expo 시뮬레이터 오류(네트워크에 접속하지 못할 때)/" data-id="ck0ui4obl0006na0ppbuzi388" class="article-share-link">Share</a>
       
       
     </footer>
@@ -335,7 +385,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/07/22/Android빌드시 SDK location not found에러 대처/" data-id="ck0eocfns0004ss0ph5vqqjlw" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/07/22/Android빌드시 SDK location not found에러 대처/" data-id="ck0ui4obj0005na0p3hy2x86i" class="article-share-link">Share</a>
       
       
     </footer>
@@ -381,7 +431,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/07/19/Missing Purpose String/" data-id="ck0eocfo50009ss0pnxxfbm02" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/07/19/Missing Purpose String/" data-id="ck0ui4obs000cna0phha6q7ni" class="article-share-link">Share</a>
       
       
     </footer>
@@ -409,44 +459,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/07/16/Application Loader를 이용하여 .ipa업로드/" data-id="ck0eocfnr0003ss0p0hm97sr6" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Webview - android에서 http프로토콜 접속하기" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/07/10/Webview - android에서 http프로토콜 접속하기/" class="article-date">
-  <time datetime="2019-07-10T06:48:42.500Z" itemprop="datePublished">2019-07-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="React-Native-Android에서-http프로토콜-접속-ERR-CLEARTEXT-NOT-PERMITTED"><a href="#React-Native-Android에서-http프로토콜-접속-ERR-CLEARTEXT-NOT-PERMITTED" class="headerlink" title="(React Native) Android에서 http프로토콜 접속 (ERR CLEARTEXT NOT PERMITTED)"></a>(React Native) Android에서 http프로토콜 접속 (ERR CLEARTEXT NOT PERMITTED)</h2><p>React Native 웹뷰로 웹앱 작업을 하는 중.. 안드로이드에서는 http프로토콜 접속이 제한되는 문제가 발생했다.</p>
-<p>보안은 ios쪽이 더 빡셀 거라 생각을 했는데 ㅂㄷ..</p>
-<p>해결은 구글 신을 통해 의외로 쉽게 됐다</p>
-<p>일단 참고한 포스팅 : <a href="https://developside.tistory.com/85" target="_blank" rel="noopener">https://developside.tistory.com/85</a></p>
-<p>내 경우 방법 1을 통해 문제를 해결했다. 아래는 위 포스팅의 해결 방법 1</p>
-<h4 id="1-AndroidManifest-xml-파일의-부분에-android-usesCleartextTraffic-”true”-로-설정"><a href="#1-AndroidManifest-xml-파일의-부분에-android-usesCleartextTraffic-”true”-로-설정" class="headerlink" title="1. AndroidManifest.xml 파일의  부분에 android:usesCleartextTraffic=”true” 로 설정"></a>1. AndroidManifest.xml 파일의 <application> 부분에 android:usesCleartextTraffic=”true” 로 설정</application></h4><p>cleartext HTTP와 같은 cleartext 네트워크 트래픽을 사용할지 여부를 나타내는 flag로 이 플래그가 flase 로 되어 있으면, 플랫폼 구성 요소 (예 : HTTP 및 FTP 스택, DownloadManager, MediaPlayer)는 일반 텍스트 트래픽 사용에 대한 앱의 요청을 거부하게 됩니다.</p>
-<p>이 flag를 설정하게 되면 모든 cleartext 트래픽은 허용처리가 됩니다.</p>
-<p><strong><em>실제 적용 코드</em></strong> (AndroidManifest.xml 파일 내)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;application</span><br><span class="line">      ...</span><br><span class="line">      android:usesCleartextTraffic=&quot;true&quot;&gt; //이 부분을 추가해주었다</span><br></pre></td></tr></table></figure>
-
-<p>+) cleartext란? 암호화 하지 않은 평문을 의미한다. 따라서 http와 같이 보안수준이 낮은 페이지도 여기 해당하는듯(?)</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/07/10/Webview - android에서 http프로토콜 접속하기/" data-id="ck0eocfoc000gss0paqdn7ofh" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/07/16/Application Loader를 이용하여 .ipa업로드/" data-id="ck0ui4obm0008na0pup09kwtc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -474,7 +487,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/built-in/">built-in</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scope/">scope</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/디스크립터/">디스크립터</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/메서드/">메서드</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/빌트인/">빌트인</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/생성자함수/">생성자함수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스코프/">스코프</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스크립트언어/">스크립트언어</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/인스턴스/">인스턴스</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/자바스크립트-용어정리/">자바스크립트 용어정리</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/전역변수/">전역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/지역변수/">지역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴파일러/">컴파일러</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/프로토타입/">프로토타입</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode-11/">Xcode 11</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/built-in/">built-in</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-native/">react native</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scope/">scope</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/디스크립터/">디스크립터</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/메서드/">메서드</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/빌트인/">빌트인</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/생성자함수/">생성자함수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스코프/">스코프</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스크립트언어/">스크립트언어</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/인스턴스/">인스턴스</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/자바스크립트-용어정리/">자바스크립트 용어정리</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/전역변수/">전역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/지역변수/">지역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴파일러/">컴파일러</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/프로토타입/">프로토타입</a></li></ul>
     </div>
   </div>
 
@@ -484,7 +497,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/built-in/" style="font-size: 10px;">built-in</a> <a href="/tags/scope/" style="font-size: 10px;">scope</a> <a href="/tags/디스크립터/" style="font-size: 10px;">디스크립터</a> <a href="/tags/메서드/" style="font-size: 10px;">메서드</a> <a href="/tags/빌트인/" style="font-size: 10px;">빌트인</a> <a href="/tags/생성자함수/" style="font-size: 10px;">생성자함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/스크립트언어/" style="font-size: 10px;">스크립트언어</a> <a href="/tags/인스턴스/" style="font-size: 10px;">인스턴스</a> <a href="/tags/자바스크립트-용어정리/" style="font-size: 10px;">자바스크립트 용어정리</a> <a href="/tags/전역변수/" style="font-size: 10px;">전역변수</a> <a href="/tags/지역변수/" style="font-size: 10px;">지역변수</a> <a href="/tags/컴파일러/" style="font-size: 10px;">컴파일러</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a>
+      <a href="/tags/Xcode/" style="font-size: 10px;">Xcode</a> <a href="/tags/Xcode-11/" style="font-size: 10px;">Xcode 11</a> <a href="/tags/built-in/" style="font-size: 10px;">built-in</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/react-native/" style="font-size: 10px;">react native</a> <a href="/tags/scope/" style="font-size: 10px;">scope</a> <a href="/tags/디스크립터/" style="font-size: 10px;">디스크립터</a> <a href="/tags/메서드/" style="font-size: 10px;">메서드</a> <a href="/tags/빌트인/" style="font-size: 10px;">빌트인</a> <a href="/tags/생성자함수/" style="font-size: 10px;">생성자함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/스크립트언어/" style="font-size: 10px;">스크립트언어</a> <a href="/tags/인스턴스/" style="font-size: 10px;">인스턴스</a> <a href="/tags/자바스크립트-용어정리/" style="font-size: 10px;">자바스크립트 용어정리</a> <a href="/tags/전역변수/" style="font-size: 10px;">전역변수</a> <a href="/tags/지역변수/" style="font-size: 10px;">지역변수</a> <a href="/tags/컴파일러/" style="font-size: 10px;">컴파일러</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a>
     </div>
   </div>
 
@@ -506,6 +519,10 @@
       <ul>
         
           <li>
+            <a href="/2019/09/22/Xcode-11-Error-Multiple-commands-produce/">Xcode 11 Error: Multiple commands produce</a>
+          </li>
+        
+          <li>
             <a href="/2019/09/03/react-native-webwiew와 react-native-unimodules 화해해라/">(no title)</a>
           </li>
         
@@ -519,10 +536,6 @@
         
           <li>
             <a href="/2019/08/28/AndroidX빌드 에러/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/06/Media가 삽입된 페이지 로딩 후 Status Bar가 사라지는 현상/">(no title)</a>
           </li>
         
       </ul>
