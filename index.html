@@ -62,6 +62,67 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-chrono-file-not-found" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/01/chrono-file-not-found/" class="article-date">
+  <time datetime="2019-10-01T13:12:35.000Z" itemprop="datePublished">2019-10-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/01/chrono-file-not-found/">chrono file not found</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="chrono-file-not-found"><a href="#chrono-file-not-found" class="headerlink" title="chrono file not found"></a>chrono file not found</h2><p>내가 한 거라곤… 컴포넌트 파일 하나의 위치를 변경한 것 뿐이었다..</p>
+<p>해당 파일을 import한 위치에서 경로도 당연히 맞게 변경해주었다</p>
+<p>근데 우리의 개복치같은 빌드시스템은 또 사정없이 피를 흘리기 시작했다… 경로 지정 다시 했다고 내가 사정사정 해도 다 필요없고 빨리 node_modules 다시 깔라고 지랄이었다.. 야박한 새끼..</p>
+<p>그래서 불안한 가슴을 안고 결국 node_modules를 삭제 후 다시 받았다</p>
+<p>시발…</p>
+<p>이럴 줄 알았다</p>
+<p>빌드 폴더도 clean해보고 캐시도 다 지워봐도 xcode에서부터 build failed이 뜨는 사태 발생 ㅠㅠ..</p>
+<p>이번엔 무슨 chrono file not found 라는 메시지였다</p>
+<p>나 첨봤다 진짜 </p>
+<p>ㅎ</p>
+<p>여태 삽질하며 이런 저런 에러 메뉴를 많이도 봤지만 늘 새롭게 엿을 주는 xcode다</p>
+<p>암튼 구글링 해봤다</p>
+<p>당연히 바로 질문과 답이 나온다 : <a href="https://github.com/invertase/react-native-firebase/issues/1610" target="_blank" rel="noopener">https://github.com/invertase/react-native-firebase/issues/1610</a> </p>
+<p>정확히 같은 에러 메시지였따. 세상에 나같은 멍청이들은 많다ㅎㅎ 위로가 됨</p>
+<p>암튼 답변중에 빌드 시스템을 Lagacy로 바꿔보라기에 바꿔봤더니 됐다</p>
+<p>근데 이건 임시방편이고.. 지난번 xcode 업데이트 후 비슷한 에러를 겪어봤기 때문에 이대로 봉합하면 안된다는 걸 알고 있었다 휴ㅜ</p>
+<p>답변을 더 내려보니 사용하지 않는 디펜던시를 삭제했더니 해결됐다는 답이 눈에 띄었다 </p>
+<p>그러고보니 질문글의 에러메시지에도 firestore가 어쩌구 하고있네</p>
+<p>당장 달려가서 podfile에서 firestore 삭제하고 <strong>*pod update</strong> 돌렸더니 문제 해결됐다</p>
+<p>근데 생각해보니까 firestore의 설치 유무는 문제는 아닌 거 같고(?)</p>
+<p>node_modules 새로 받고 pod install만 돌리고 pod update를 안 돌린게 문제였던거 같다</p>
+<p>firebase는 pod install이 아니라 pod update를 해야 한다는 것!!! </p>
+<p>잊 지 말 쟈 ! ! !</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ldyulia.github.io/2019/10/01/chrono-file-not-found/" data-id="ck17vm5k2000ikc0pq807scus" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-native/">react native</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Xcode-11-Error-Multiple-commands-produce" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/22/Xcode-11-Error-Multiple-commands-produce/" class="article-date">
@@ -100,7 +161,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/09/22/Xcode-11-Error-Multiple-commands-produce/" data-id="ck0ui6l60000jr30pmoae6zd4" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/09/22/Xcode-11-Error-Multiple-commands-produce/" data-id="ck17vm5k0000gkc0pkqzq043x" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode-11/">Xcode 11</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-native/">react native</a></li></ul>
@@ -143,7 +204,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/09/03/react-native-webwiew와 react-native-unimodules 화해해라/" data-id="ck0ui6l66000pr30pr6kt4jei" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/09/03/react-native-webwiew와 react-native-unimodules 화해해라/" data-id="ck17vm5k8000qkc0pywjfj9nv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -175,7 +236,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/08/30/react-native-push-notification설치/" data-id="ck0ui6l65000or30pj9qzxy6q" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/08/30/react-native-push-notification설치/" data-id="ck17vm5k4000mkc0p09qvaxnm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -212,7 +273,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/08/29/react-native-push-notification 에러/" data-id="ck0ui6l62000lr30ptlw6j06r" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/08/29/react-native-push-notification 에러/" data-id="ck17vm5k7000pkc0piv8tb2ch" class="article-share-link">Share</a>
       
       
     </footer>
@@ -271,7 +332,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/08/28/AndroidX빌드 에러/" data-id="ck0ui6l570004r30p4v9v82d1" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/08/28/AndroidX빌드 에러/" data-id="ck17vm5j60000kc0pqbbpczxg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -307,7 +368,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/08/06/Media가 삽입된 페이지 로딩 후 Status Bar가 사라지는 현상/" data-id="ck0ui6l5e0008r30p082v2avh" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/08/06/Media가 삽입된 페이지 로딩 후 Status Bar가 사라지는 현상/" data-id="ck17vm5jq0009kc0paydtiyek" class="article-share-link">Share</a>
       
       
     </footer>
@@ -345,7 +406,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/07/23/Expo 시뮬레이터 오류(네트워크에 접속하지 못할 때)/" data-id="ck0ui6l5c0006r30pu97rzeu9" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/07/23/Expo 시뮬레이터 오류(네트워크에 접속하지 못할 때)/" data-id="ck17vm5jo0006kc0p4ry0k8wu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -385,7 +446,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/07/22/Android빌드시 SDK location not found에러 대처/" data-id="ck0ui6l5a0005r30po3dr2ujc" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/07/22/Android빌드시 SDK location not found에러 대처/" data-id="ck17vm5jn0005kc0pnghjt7f3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -431,35 +492,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/07/19/Missing Purpose String/" data-id="ck0ui6l5i000br30poszapk0o" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Application Loader를 이용하여 .ipa업로드" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/07/16/Application Loader를 이용하여 .ipa업로드/" class="article-date">
-  <time datetime="2019-07-16T08:44:26.150Z" itemprop="datePublished">2019-07-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Application-Loader를-이용하여-ipa파일-업로드하기"><a href="#Application-Loader를-이용하여-ipa파일-업로드하기" class="headerlink" title="Application Loader를 이용하여 ipa파일 업로드하기"></a>Application Loader를 이용하여 ipa파일 업로드하기</h3><p>Application Loader 문서: </p>
-<p><a href="https://help.apple.com/itc/apploader/#/itc8e7ec5a60" target="_blank" rel="noopener">https://help.apple.com/itc/apploader/#/itc8e7ec5a60</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/07/16/Application Loader를 이용하여 .ipa업로드/" data-id="ck0ui6l5g0009r30p377gkrub" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/07/19/Missing Purpose String/" data-id="ck17vm5jw000ckc0p1017dowp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -497,7 +530,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Xcode/" style="font-size: 10px;">Xcode</a> <a href="/tags/Xcode-11/" style="font-size: 10px;">Xcode 11</a> <a href="/tags/built-in/" style="font-size: 10px;">built-in</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/react-native/" style="font-size: 10px;">react native</a> <a href="/tags/scope/" style="font-size: 10px;">scope</a> <a href="/tags/디스크립터/" style="font-size: 10px;">디스크립터</a> <a href="/tags/메서드/" style="font-size: 10px;">메서드</a> <a href="/tags/빌트인/" style="font-size: 10px;">빌트인</a> <a href="/tags/생성자함수/" style="font-size: 10px;">생성자함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/스크립트언어/" style="font-size: 10px;">스크립트언어</a> <a href="/tags/인스턴스/" style="font-size: 10px;">인스턴스</a> <a href="/tags/자바스크립트-용어정리/" style="font-size: 10px;">자바스크립트 용어정리</a> <a href="/tags/전역변수/" style="font-size: 10px;">전역변수</a> <a href="/tags/지역변수/" style="font-size: 10px;">지역변수</a> <a href="/tags/컴파일러/" style="font-size: 10px;">컴파일러</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a>
+      <a href="/tags/Xcode/" style="font-size: 20px;">Xcode</a> <a href="/tags/Xcode-11/" style="font-size: 10px;">Xcode 11</a> <a href="/tags/built-in/" style="font-size: 10px;">built-in</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/react-native/" style="font-size: 20px;">react native</a> <a href="/tags/scope/" style="font-size: 10px;">scope</a> <a href="/tags/디스크립터/" style="font-size: 10px;">디스크립터</a> <a href="/tags/메서드/" style="font-size: 10px;">메서드</a> <a href="/tags/빌트인/" style="font-size: 10px;">빌트인</a> <a href="/tags/생성자함수/" style="font-size: 10px;">생성자함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/스크립트언어/" style="font-size: 10px;">스크립트언어</a> <a href="/tags/인스턴스/" style="font-size: 10px;">인스턴스</a> <a href="/tags/자바스크립트-용어정리/" style="font-size: 10px;">자바스크립트 용어정리</a> <a href="/tags/전역변수/" style="font-size: 10px;">전역변수</a> <a href="/tags/지역변수/" style="font-size: 10px;">지역변수</a> <a href="/tags/컴파일러/" style="font-size: 10px;">컴파일러</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a>
     </div>
   </div>
 
@@ -506,7 +539,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
     </div>
   </div>
 
@@ -517,6 +550,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/10/01/chrono-file-not-found/">chrono file not found</a>
+          </li>
         
           <li>
             <a href="/2019/09/22/Xcode-11-Error-Multiple-commands-produce/">Xcode 11 Error: Multiple commands produce</a>
@@ -532,10 +569,6 @@
         
           <li>
             <a href="/2019/08/29/react-native-push-notification 에러/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/28/AndroidX빌드 에러/">(no title)</a>
           </li>
         
       </ul>

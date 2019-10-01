@@ -5,19 +5,15 @@
   
 
   
-  <title>yulia&#39;s</title>
+  <title>Archives: 2019/10 | yulia&#39;s</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="React Native : Android 빌드시 SDK location not found 에러 대처완성된 프로젝트 파일을 USB등을 이용해 다른 컴퓨터로 옮겼을 때, 안드로이드 환경변수 설정을 마쳤음에도 다음과 같은 에러가 발생할 때가 있었다.  123What went wrong:A problem occurred evaluating project &amp;apos">
-<meta property="og:type" content="article">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="yulia&#39;s">
-<meta property="og:url" content="https://ldyulia.github.io/2019/07/22/Android빌드시 SDK location not found에러 대처/index.html">
+<meta property="og:url" content="https://ldyulia.github.io/archives/2019/10/index.html">
 <meta property="og:site_name" content="yulia&#39;s">
-<meta property="og:description" content="React Native : Android 빌드시 SDK location not found 에러 대처완성된 프로젝트 파일을 USB등을 이용해 다른 컴퓨터로 옮겼을 때, 안드로이드 환경변수 설정을 마쳤음에도 다음과 같은 에러가 발생할 때가 있었다.  123What went wrong:A problem occurred evaluating project &amp;apos">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-22T03:50:14.106Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="yulia&#39;s">
-<meta name="twitter:description" content="React Native : Android 빌드시 SDK location not found 에러 대처완성된 프로젝트 파일을 USB등을 이용해 다른 컴퓨터로 옮겼을 때, 안드로이드 환경변수 설정을 마쳤음에도 다음과 같은 에러가 발생할 때가 있었다.  123What went wrong:A problem occurred evaluating project &amp;apos">
   
     <link rel="alternate" href="/atom.xml" title="yulia&#39;s" type="application/atom+xml">
   
@@ -64,64 +60,40 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Android빌드시 SDK location not found에러 대처" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/07/22/Android빌드시 SDK location not found에러 대처/" class="article-date">
-  <time datetime="2019-07-22T03:50:14.106Z" itemprop="datePublished">2019-07-22</time>
+        <section id="main">
+  
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2019/10/01/chrono-file-not-found/" class="archive-article-date">
+  <time datetime="2019-10-01T13:12:35.000Z" itemprop="datePublished">Oct 1</time>
 </a>
-    
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/10/01/chrono-file-not-found/">chrono file not found</a>
+    </h1>
+  
+
+    </header>
   </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="React-Native-Android-빌드시-SDK-location-not-found-에러-대처"><a href="#React-Native-Android-빌드시-SDK-location-not-found-에러-대처" class="headerlink" title="React Native : Android 빌드시 SDK location not found 에러 대처"></a>React Native : Android 빌드시 SDK location not found 에러 대처</h2><p>완성된 프로젝트 파일을 USB등을 이용해 다른 컴퓨터로 옮겼을 때, 안드로이드 환경변수 설정을 마쳤음에도 다음과 같은 에러가 발생할 때가 있었다. </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">What went wrong:</span><br><span class="line">A problem occurred evaluating project &apos;:app&apos;.  </span><br><span class="line">&gt; SDK location not found. Define location with sdk.dir in the local.properties file or with an ANDROID_HOME environment variable.</span><br></pre></td></tr></table></figure>
-
-<p>환경변수를 설정했음에도 위와같은 에러가 나는 이유를 정확히는 모르겠지만.. 일단 구글링한 결과 아래와 같은 방법으로 해결했다. </p>
-<ul>
-<li><p>Go to the <code>android/</code> directory of your react-native project</p>
-</li>
-<li><p>Create a file called <code>local.properties</code> with this line:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sdk.dir = /Users/USERNAME/Library/Android/sdk</span><br></pre></td></tr></table></figure>
-
-<p>Where <code>USERNAME</code> is your OSX username</p>
-</li>
-</ul>
-<p>referance : <a href="https://stackoverflow.com/questions/32634352/react-native-android-build-failed-sdk-location-not-found" target="_blank" rel="noopener">https://stackoverflow.com/questions/32634352/react-native-android-build-failed-sdk-location-not-found</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/07/22/Android빌드시 SDK location not found에러 대처/" data-id="ck17vm5jn0005kc0pnghjt7f3" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2019/07/23/Expo 시뮬레이터 오류(네트워크에 접속하지 못할 때)/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2019/07/19/Missing Purpose String/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title"></div>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
+
 
 </section>
         
