@@ -62,6 +62,132 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-CodePush release command" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/26/CodePush release command/" class="article-date">
+  <time datetime="2019-10-26T02:12:35.000Z" itemprop="datePublished">2019-10-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/26/CodePush release command/">CodePush release command</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="CodePush-release-command"><a href="#CodePush-release-command" class="headerlink" title="CodePush release command"></a>CodePush release command</h2><p>appcenter codepush release-react -a yulia-meincmc.com/RNDoctorSlide-ios -d Staging</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ldyulia.github.io/2019/10/26/CodePush release command/" data-id="ck2eaxst00005fr0pa12xvpsg" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CodePush/">CodePush</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-native/">react native</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-forEach를 통한 object반복문:timestamp순으로 정렬" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/16/forEach를 통한 object반복문:timestamp순으로 정렬/" class="article-date">
+  <time datetime="2019-10-16T02:48:51.000Z" itemprop="datePublished">2019-10-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/16/forEach를 통한 object반복문:timestamp순으로 정렬/">forEach를 통해 object의 key 또는 value 가져오기 / timestamp 순서로 정렬</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="forEach를-통해-object의-key-또는-value-가져오기-timestamp-순서로-정렬"><a href="#forEach를-통해-object의-key-또는-value-가져오기-timestamp-순서로-정렬" class="headerlink" title="forEach를 통해 object의 key 또는 value 가져오기 / timestamp 순서로 정렬"></a>forEach를 통해 object의 key 또는 value 가져오기 / timestamp 순서로 정렬</h3><p><code>const data = {object1},{object2},{object3}...</code> 일 때</p>
+<p><code>Object.keys(data).forEach</code> 를 통해 각 object의 key 또는 value에 접근할 수 있다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">firebase</span><br><span class="line">      .database()</span><br><span class="line">      .ref(&quot;/USERPURCHASED/&quot; + uid)</span><br><span class="line">      .on(&quot;value&quot;, snapshot =&gt; &#123;</span><br><span class="line">        if (snapshot.val() !== null) &#123;</span><br><span class="line">          let dataArr = [];</span><br><span class="line">          const data = snapshot.val();</span><br><span class="line">          Object.keys(data).forEach(item =&gt; dataArr.push(data[item]));</span><br><span class="line"></span><br><span class="line">					//가져온 객체 내 timestamp 값을 이용해 정렬</span><br><span class="line">          dataArr = dataArr.sort((a, b) =&gt; &#123;</span><br><span class="line">            return new Date(b.timestamp) - new Date(a.timestamp);</span><br><span class="line">          &#125;);</span><br><span class="line">          setData(dataArr);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">          setData(&quot;No data&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ldyulia.github.io/2019/10/16/forEach를 통한 object반복문:timestamp순으로 정렬/" data-id="ck2eaxstk000pfr0pfqplq6sy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/forEach/">forEach</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/object/">object</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-## React Navigation getParams in function component  " class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/14/## React Navigation getParams in function component  /" class="article-date">
+  <time datetime="2019-10-14T00:42:35.000Z" itemprop="datePublished">2019-10-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/14/## React Navigation getParams in function component  /">React Navigation getParams in function component</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="React-Navigation-getParams-in-function-component"><a href="#React-Navigation-getParams-in-function-component" class="headerlink" title="React Navigation getParams in function component"></a>React Navigation getParams in function component</h2><p>MyNavigation.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">onPress=&#123;() =&gt; navigation.navigate(&#123;</span><br><span class="line">	routeName: &quot;MyComponent&quot;,</span><br><span class="line">	params: &#123;type: &apos;something I want&apos;&#125;</span><br><span class="line">&#125;)&#125;</span><br></pre></td></tr></table></figure>
+
+<p>MyComponent.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const MyComponent = (&#123;navigation&#125;) =&gt; &#123;</span><br><span class="line">	console.log(navigation.getParam(&apos;type&apos;))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Ref: <a href="https://stackoverflow.com/questions/57878306/react-navigation-getparams-in-function-component" target="_blank" rel="noopener">https://stackoverflow.com/questions/57878306/react-navigation-getparams-in-function-component</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ldyulia.github.io/2019/10/14/## React Navigation getParams in function component  /" data-id="ck2eaxssm0000fr0pko5v4vix" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-native/">react native</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-navigation/">react navigation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-chrono-file-not-found" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/10/01/chrono-file-not-found/" class="article-date">
@@ -111,7 +237,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/10/01/chrono-file-not-found/" data-id="ck17vm5k2000ikc0pq807scus" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/10/01/chrono-file-not-found/" data-id="ck2eaxsti000mfr0pqw9dpklw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-native/">react native</a></li></ul>
@@ -161,7 +287,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/09/22/Xcode-11-Error-Multiple-commands-produce/" data-id="ck17vm5k0000gkc0pkqzq043x" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/09/22/Xcode-11-Error-Multiple-commands-produce/" data-id="ck2eaxstl000qfr0p39ucvskg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode-11/">Xcode 11</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-native/">react native</a></li></ul>
@@ -204,7 +330,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/09/03/react-native-webwiew와 react-native-unimodules 화해해라/" data-id="ck17vm5k8000qkc0pywjfj9nv" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/09/03/react-native-webwiew와 react-native-unimodules 화해해라/" data-id="ck2eaxstq000wfr0p6m2mk7g0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -236,7 +362,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/08/30/react-native-push-notification설치/" data-id="ck17vm5k4000mkc0p09qvaxnm" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/08/30/react-native-push-notification설치/" data-id="ck2eaxstp000vfr0ppqjitu6q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -273,7 +399,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/08/29/react-native-push-notification 에러/" data-id="ck17vm5k7000pkc0piv8tb2ch" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/08/29/react-native-push-notification 에러/" data-id="ck2eaxsto000tfr0p2onc9utq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -332,7 +458,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/08/28/AndroidX빌드 에러/" data-id="ck17vm5j60000kc0pqbbpczxg" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/08/28/AndroidX빌드 에러/" data-id="ck2eaxssy0004fr0pw0xz1wye" class="article-share-link">Share</a>
       
       
     </footer>
@@ -368,131 +494,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/08/06/Media가 삽입된 페이지 로딩 후 Status Bar가 사라지는 현상/" data-id="ck17vm5jq0009kc0paydtiyek" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Expo 시뮬레이터 오류(네트워크에 접속하지 못할 때)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/07/23/Expo 시뮬레이터 오류(네트워크에 접속하지 못할 때)/" class="article-date">
-  <time datetime="2019-07-23T01:47:44.971Z" itemprop="datePublished">2019-07-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Expo-the-experience-you-requested-requires-a-newer-version-of-the-expo-client-app-simulator"><a href="#Expo-the-experience-you-requested-requires-a-newer-version-of-the-expo-client-app-simulator" class="headerlink" title="(Expo) the experience you requested requires a newer version of the expo client app simulator"></a>(Expo) the experience you requested requires a newer version of the expo client app simulator</h2><p>한동안 React Native Cli를 이용하다가 오랜만에 Expo로 돌아가려고 했을 때, Simulator에서 자꾸 프로젝트 개발 서버에 접속하지 못하는 문제가 발생해 또 사람 빡치게 했다 으..</p>
-<p>처음 시뮬레이터 화면에서 받은 메시지는 대략 이랬다</p>
-<h5 id="It-looks-like-you-may-be-using-a-LAN-URL"><a href="#It-looks-like-you-may-be-using-a-LAN-URL" class="headerlink" title="It looks like you may be using a LAN URL"></a>It looks like you may be using a LAN URL</h5><p>별 거 아닌 문제라고 생각했는데(실제로 별 거 아니긴 했다) 은근 해결 방법을 찾는데 시간이 걸려 짜증이 났기 때문에 스크린샷이나 더 자세한 메시지는 남겨두지 못했다. 그리고 저 메시지로 구글링 했을땐 도대체 도움될만한 방법은 1도 나타나지 않았다. EXPO_PACKAGER_HOSTNAME 을 환경변수로 세팅하라는데 나같은 똘추는 그래서 이걸 어디다 세팅해야하는데?? 하고 물음표만 증가될 뿐이었다.. 알려줄 거면 처음부터 끝까지 떠먹여주라고…</p>
-<p>아무튼 뭐 localhost대신 lan으로 접속해봐라 어쩌구 저쩌구 말이 많았지만 하나도 통하질 않았고</p>
-<p>다음으로 검색한 게 </p>
-<p>the experience you requested requires a newer version of the expo client app simulator </p>
-<p>이거였다</p>
-<p>생각해보면 그냥 바로 저걸로 검색했어야했다. 앱 개발은 여전히 초짜라 시뮬레이터에서 앱 버전을 어떻게 업그레이드 한다는지 띠용되어서 나도 모르게 2순위로 외면했던 거 같다.</p>
-<p>방법은 허무했다</p>
-<p>그냥 시뮬레이터 메뉴에서 Hardware - Erase All Content and Settings 해서 시뮬레이터 안 내용물 싹 지워준 다음 npm start(expo start / yarn start) 해주면 되는 거였다.. 그럼 최신 버전 엑스포 다시 깔림ㅎ.. </p>
-<p>시뮬레이터 안에 뭐가 이미 많이 설치되어 있거나 세팅되어 있으면 개별적으로 어케 올리는진 모르겠다</p>
-<p>그건 나중에 찾아볼래..ㄴ </p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/07/23/Expo 시뮬레이터 오류(네트워크에 접속하지 못할 때)/" data-id="ck17vm5jo0006kc0p4ry0k8wu" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Android빌드시 SDK location not found에러 대처" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/07/22/Android빌드시 SDK location not found에러 대처/" class="article-date">
-  <time datetime="2019-07-22T03:50:14.106Z" itemprop="datePublished">2019-07-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="React-Native-Android-빌드시-SDK-location-not-found-에러-대처"><a href="#React-Native-Android-빌드시-SDK-location-not-found-에러-대처" class="headerlink" title="React Native : Android 빌드시 SDK location not found 에러 대처"></a>React Native : Android 빌드시 SDK location not found 에러 대처</h2><p>완성된 프로젝트 파일을 USB등을 이용해 다른 컴퓨터로 옮겼을 때, 안드로이드 환경변수 설정을 마쳤음에도 다음과 같은 에러가 발생할 때가 있었다. </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">What went wrong:</span><br><span class="line">A problem occurred evaluating project &apos;:app&apos;.  </span><br><span class="line">&gt; SDK location not found. Define location with sdk.dir in the local.properties file or with an ANDROID_HOME environment variable.</span><br></pre></td></tr></table></figure>
-
-<p>환경변수를 설정했음에도 위와같은 에러가 나는 이유를 정확히는 모르겠지만.. 일단 구글링한 결과 아래와 같은 방법으로 해결했다. </p>
-<ul>
-<li><p>Go to the <code>android/</code> directory of your react-native project</p>
-</li>
-<li><p>Create a file called <code>local.properties</code> with this line:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sdk.dir = /Users/USERNAME/Library/Android/sdk</span><br></pre></td></tr></table></figure>
-
-<p>Where <code>USERNAME</code> is your OSX username</p>
-</li>
-</ul>
-<p>referance : <a href="https://stackoverflow.com/questions/32634352/react-native-android-build-failed-sdk-location-not-found" target="_blank" rel="noopener">https://stackoverflow.com/questions/32634352/react-native-android-build-failed-sdk-location-not-found</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/07/22/Android빌드시 SDK location not found에러 대처/" data-id="ck17vm5jn0005kc0pnghjt7f3" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Missing Purpose String" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/07/19/Missing Purpose String/" class="article-date">
-  <time datetime="2019-07-19T02:06:27.658Z" itemprop="datePublished">2019-07-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Missing-Purpose-String-in-Info-plist"><a href="#Missing-Purpose-String-in-Info-plist" class="headerlink" title="Missing Purpose String in Info.plist"></a><strong>Missing Purpose String in Info.plist</strong></h2><p>React Native로 앱을 빌드하고 App Store Connect에 업로드를 성공한 뒤 얼마 지나지 않아 애플로부터 다음과 같은 메일을 받았다.</p>
-<table>
-<thead>
-<tr>
-<th><img src="https://ci4.googleusercontent.com/proxy/TgPoGA52jDSuJ_30neu_aLSOf6CDMr6uSdhTSbKPRGaZTfakGG0nEchQCqd2JvEi0I-H92l0iBlqxD5s0WJaAU_yEtaoedMaaCGmOO-u70NoWnsKKunSI9ZtqQ=s0-d-e1-ft#https://appstoreconnect.apple.com/itc/images/email/email-asc-logo@2X.png" alt="App Store Connect"></th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-</tr>
-<tr>
-<td>Dear Developer,We identified one or more issues with a recent delivery for your app, “Apptest02” 1.0 (1). Your delivery was successful, but you may wish to correct the following issues in your next delivery:<strong>ITMS-90683: Missing Purpose String in Info.plist</strong> - Your app’s code references one or more APIs that access sensitive user data. The app’s Info.plist file should contain a NSLocationAlwaysUsageDescription key with a user-facing purpose string explaining clearly and completely why your app needs the data. Starting Spring 2019, all apps submitted to the App Store that access user data are required to include a purpose string. If you’re using external libraries or SDKs, they may reference APIs that require a purpose string. While your app might not use these APIs, a purpose string is still required. You can contact the developer of the library or SDK and request they release a version of their code that doesn’t contain the APIs. Learn more (<a href="https://developer.apple.com/documentation/uikit/core_app/protecting_the_user_s_privacy).**ITMS-90683" target="_blank" rel="noopener">https://developer.apple.com/documentation/uikit/core_app/protecting_the_user_s_privacy).**ITMS-90683</a>: Missing Purpose String in Info.plist** - Your app’s code references one or more APIs that access sensitive user data. The app’s Info.plist file should contain a NSLocationWhenInUseUsageDescription key with a user-facing purpose string explaining clearly and completely why your app needs the data. Starting Spring 2019, all apps submitted to the App Store that access user data are required to include a purpose string. If you’re using external libraries or SDKs, they may reference APIs that require a purpose string. While your app might not use these APIs, a purpose string is still required. You can contact the developer of the library or SDK and request they release a version of their code that doesn’t contain the APIs. Learn more (<a href="https://developer.apple.com/documentation/uikit/core_app/protecting_the_user_s_privacy).After" target="_blank" rel="noopener">https://developer.apple.com/documentation/uikit/core_app/protecting_the_user_s_privacy).After</a> you’ve corrected the issues, you can use Xcode or Application Loader to upload a new binary to App Store Connect.Best regards,The App Store Team</td>
-</tr>
-</tbody></table>
-<p>위치정보를 쓰지도 않는데 이게 무슨 소리인가 해서 찾아봤다. </p>
-<p><a href="https://github.com/facebook/react-native/issues/20879" target="_blank" rel="noopener">https://github.com/facebook/react-native/issues/20879</a></p>
-<p>아마도 RN bundle에 위치정보 이용 코드가 포함되는 듯하다</p>
-<p>해결을 위해 일단 메일에서 요구하는대로 xcode를 열어 info.plist 파일에 요구되는 key들을 추가했다.</p>
-<p>참고로 xcode에서는 Privacy - Location Always Usage Description이다. </p>
-<p>에디터에서 파일을 열어보면 엑스코드에서 추가한 키가 <code>&lt;key&gt;NSLocationAlwaysUsageDescription&lt;/key&gt;</code> 로 추가된 것을 볼 수 있다.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/07/19/Missing Purpose String/" data-id="ck17vm5jw000ckc0p1017dowp" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/08/06/Media가 삽입된 페이지 로딩 후 Status Bar가 사라지는 현상/" data-id="ck2eaxst4000afr0ptzl7dkdk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -520,7 +522,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode-11/">Xcode 11</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/built-in/">built-in</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-native/">react native</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scope/">scope</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/디스크립터/">디스크립터</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/메서드/">메서드</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/빌트인/">빌트인</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/생성자함수/">생성자함수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스코프/">스코프</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스크립트언어/">스크립트언어</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/인스턴스/">인스턴스</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/자바스크립트-용어정리/">자바스크립트 용어정리</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/전역변수/">전역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/지역변수/">지역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴파일러/">컴파일러</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/프로토타입/">프로토타입</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CodePush/">CodePush</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode-11/">Xcode 11</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/built-in/">built-in</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/forEach/">forEach</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/object/">object</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-native/">react native</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-navigation/">react navigation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scope/">scope</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/디스크립터/">디스크립터</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/메서드/">메서드</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/빌트인/">빌트인</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/생성자함수/">생성자함수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스코프/">스코프</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스크립트언어/">스크립트언어</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/인스턴스/">인스턴스</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/자바스크립트-용어정리/">자바스크립트 용어정리</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/전역변수/">전역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/지역변수/">지역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴파일러/">컴파일러</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/프로토타입/">프로토타입</a></li></ul>
     </div>
   </div>
 
@@ -530,7 +532,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Xcode/" style="font-size: 20px;">Xcode</a> <a href="/tags/Xcode-11/" style="font-size: 10px;">Xcode 11</a> <a href="/tags/built-in/" style="font-size: 10px;">built-in</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/react-native/" style="font-size: 20px;">react native</a> <a href="/tags/scope/" style="font-size: 10px;">scope</a> <a href="/tags/디스크립터/" style="font-size: 10px;">디스크립터</a> <a href="/tags/메서드/" style="font-size: 10px;">메서드</a> <a href="/tags/빌트인/" style="font-size: 10px;">빌트인</a> <a href="/tags/생성자함수/" style="font-size: 10px;">생성자함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/스크립트언어/" style="font-size: 10px;">스크립트언어</a> <a href="/tags/인스턴스/" style="font-size: 10px;">인스턴스</a> <a href="/tags/자바스크립트-용어정리/" style="font-size: 10px;">자바스크립트 용어정리</a> <a href="/tags/전역변수/" style="font-size: 10px;">전역변수</a> <a href="/tags/지역변수/" style="font-size: 10px;">지역변수</a> <a href="/tags/컴파일러/" style="font-size: 10px;">컴파일러</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a>
+      <a href="/tags/CodePush/" style="font-size: 10px;">CodePush</a> <a href="/tags/Xcode/" style="font-size: 15px;">Xcode</a> <a href="/tags/Xcode-11/" style="font-size: 10px;">Xcode 11</a> <a href="/tags/built-in/" style="font-size: 10px;">built-in</a> <a href="/tags/forEach/" style="font-size: 10px;">forEach</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/object/" style="font-size: 10px;">object</a> <a href="/tags/react-native/" style="font-size: 20px;">react native</a> <a href="/tags/react-navigation/" style="font-size: 10px;">react navigation</a> <a href="/tags/scope/" style="font-size: 10px;">scope</a> <a href="/tags/디스크립터/" style="font-size: 10px;">디스크립터</a> <a href="/tags/메서드/" style="font-size: 10px;">메서드</a> <a href="/tags/빌트인/" style="font-size: 10px;">빌트인</a> <a href="/tags/생성자함수/" style="font-size: 10px;">생성자함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/스크립트언어/" style="font-size: 10px;">스크립트언어</a> <a href="/tags/인스턴스/" style="font-size: 10px;">인스턴스</a> <a href="/tags/자바스크립트-용어정리/" style="font-size: 10px;">자바스크립트 용어정리</a> <a href="/tags/전역변수/" style="font-size: 10px;">전역변수</a> <a href="/tags/지역변수/" style="font-size: 10px;">지역변수</a> <a href="/tags/컴파일러/" style="font-size: 10px;">컴파일러</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a>
     </div>
   </div>
 
@@ -552,23 +554,23 @@
       <ul>
         
           <li>
+            <a href="/2019/10/26/CodePush release command/">CodePush release command</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/16/forEach를 통한 object반복문:timestamp순으로 정렬/">forEach를 통해 object의 key 또는 value 가져오기 / timestamp 순서로 정렬</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/14/## React Navigation getParams in function component  /">React Navigation getParams in function component</a>
+          </li>
+        
+          <li>
             <a href="/2019/10/01/chrono-file-not-found/">chrono file not found</a>
           </li>
         
           <li>
             <a href="/2019/09/22/Xcode-11-Error-Multiple-commands-produce/">Xcode 11 Error: Multiple commands produce</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/03/react-native-webwiew와 react-native-unimodules 화해해라/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/30/react-native-push-notification설치/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/29/react-native-push-notification 에러/">(no title)</a>
           </li>
         
       </ul>

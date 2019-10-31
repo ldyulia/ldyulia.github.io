@@ -62,6 +62,130 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Expo 시뮬레이터 오류(네트워크에 접속하지 못할 때)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/23/Expo 시뮬레이터 오류(네트워크에 접속하지 못할 때)/" class="article-date">
+  <time datetime="2019-07-23T01:47:44.971Z" itemprop="datePublished">2019-07-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Expo-the-experience-you-requested-requires-a-newer-version-of-the-expo-client-app-simulator"><a href="#Expo-the-experience-you-requested-requires-a-newer-version-of-the-expo-client-app-simulator" class="headerlink" title="(Expo) the experience you requested requires a newer version of the expo client app simulator"></a>(Expo) the experience you requested requires a newer version of the expo client app simulator</h2><p>한동안 React Native Cli를 이용하다가 오랜만에 Expo로 돌아가려고 했을 때, Simulator에서 자꾸 프로젝트 개발 서버에 접속하지 못하는 문제가 발생해 또 사람 빡치게 했다 으..</p>
+<p>처음 시뮬레이터 화면에서 받은 메시지는 대략 이랬다</p>
+<h5 id="It-looks-like-you-may-be-using-a-LAN-URL"><a href="#It-looks-like-you-may-be-using-a-LAN-URL" class="headerlink" title="It looks like you may be using a LAN URL"></a>It looks like you may be using a LAN URL</h5><p>별 거 아닌 문제라고 생각했는데(실제로 별 거 아니긴 했다) 은근 해결 방법을 찾는데 시간이 걸려 짜증이 났기 때문에 스크린샷이나 더 자세한 메시지는 남겨두지 못했다. 그리고 저 메시지로 구글링 했을땐 도대체 도움될만한 방법은 1도 나타나지 않았다. EXPO_PACKAGER_HOSTNAME 을 환경변수로 세팅하라는데 나같은 똘추는 그래서 이걸 어디다 세팅해야하는데?? 하고 물음표만 증가될 뿐이었다.. 알려줄 거면 처음부터 끝까지 떠먹여주라고…</p>
+<p>아무튼 뭐 localhost대신 lan으로 접속해봐라 어쩌구 저쩌구 말이 많았지만 하나도 통하질 않았고</p>
+<p>다음으로 검색한 게 </p>
+<p>the experience you requested requires a newer version of the expo client app simulator </p>
+<p>이거였다</p>
+<p>생각해보면 그냥 바로 저걸로 검색했어야했다. 앱 개발은 여전히 초짜라 시뮬레이터에서 앱 버전을 어떻게 업그레이드 한다는지 띠용되어서 나도 모르게 2순위로 외면했던 거 같다.</p>
+<p>방법은 허무했다</p>
+<p>그냥 시뮬레이터 메뉴에서 Hardware - Erase All Content and Settings 해서 시뮬레이터 안 내용물 싹 지워준 다음 npm start(expo start / yarn start) 해주면 되는 거였다.. 그럼 최신 버전 엑스포 다시 깔림ㅎ.. </p>
+<p>시뮬레이터 안에 뭐가 이미 많이 설치되어 있거나 세팅되어 있으면 개별적으로 어케 올리는진 모르겠다</p>
+<p>그건 나중에 찾아볼래..ㄴ </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ldyulia.github.io/2019/07/23/Expo 시뮬레이터 오류(네트워크에 접속하지 못할 때)/" data-id="ck2eaxstb000gfr0p29u50vx9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Android빌드시 SDK location not found에러 대처" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/22/Android빌드시 SDK location not found에러 대처/" class="article-date">
+  <time datetime="2019-07-22T03:50:14.106Z" itemprop="datePublished">2019-07-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="React-Native-Android-빌드시-SDK-location-not-found-에러-대처"><a href="#React-Native-Android-빌드시-SDK-location-not-found-에러-대처" class="headerlink" title="React Native : Android 빌드시 SDK location not found 에러 대처"></a>React Native : Android 빌드시 SDK location not found 에러 대처</h2><p>완성된 프로젝트 파일을 USB등을 이용해 다른 컴퓨터로 옮겼을 때, 안드로이드 환경변수 설정을 마쳤음에도 다음과 같은 에러가 발생할 때가 있었다. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">What went wrong:</span><br><span class="line">A problem occurred evaluating project &apos;:app&apos;.  </span><br><span class="line">&gt; SDK location not found. Define location with sdk.dir in the local.properties file or with an ANDROID_HOME environment variable.</span><br></pre></td></tr></table></figure>
+
+<p>환경변수를 설정했음에도 위와같은 에러가 나는 이유를 정확히는 모르겠지만.. 일단 구글링한 결과 아래와 같은 방법으로 해결했다. </p>
+<ul>
+<li><p>Go to the <code>android/</code> directory of your react-native project</p>
+</li>
+<li><p>Create a file called <code>local.properties</code> with this line:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sdk.dir = /Users/USERNAME/Library/Android/sdk</span><br></pre></td></tr></table></figure>
+
+<p>Where <code>USERNAME</code> is your OSX username</p>
+</li>
+</ul>
+<p>referance : <a href="https://stackoverflow.com/questions/32634352/react-native-android-build-failed-sdk-location-not-found" target="_blank" rel="noopener">https://stackoverflow.com/questions/32634352/react-native-android-build-failed-sdk-location-not-found</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ldyulia.github.io/2019/07/22/Android빌드시 SDK location not found에러 대처/" data-id="ck2eaxst10007fr0plui3nje8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Missing Purpose String" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/19/Missing Purpose String/" class="article-date">
+  <time datetime="2019-07-19T02:06:27.658Z" itemprop="datePublished">2019-07-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Missing-Purpose-String-in-Info-plist"><a href="#Missing-Purpose-String-in-Info-plist" class="headerlink" title="Missing Purpose String in Info.plist"></a><strong>Missing Purpose String in Info.plist</strong></h2><p>React Native로 앱을 빌드하고 App Store Connect에 업로드를 성공한 뒤 얼마 지나지 않아 애플로부터 다음과 같은 메일을 받았다.</p>
+<table>
+<thead>
+<tr>
+<th><img src="https://ci4.googleusercontent.com/proxy/TgPoGA52jDSuJ_30neu_aLSOf6CDMr6uSdhTSbKPRGaZTfakGG0nEchQCqd2JvEi0I-H92l0iBlqxD5s0WJaAU_yEtaoedMaaCGmOO-u70NoWnsKKunSI9ZtqQ=s0-d-e1-ft#https://appstoreconnect.apple.com/itc/images/email/email-asc-logo@2X.png" alt="App Store Connect"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+</tr>
+<tr>
+<td>Dear Developer,We identified one or more issues with a recent delivery for your app, “Apptest02” 1.0 (1). Your delivery was successful, but you may wish to correct the following issues in your next delivery:<strong>ITMS-90683: Missing Purpose String in Info.plist</strong> - Your app’s code references one or more APIs that access sensitive user data. The app’s Info.plist file should contain a NSLocationAlwaysUsageDescription key with a user-facing purpose string explaining clearly and completely why your app needs the data. Starting Spring 2019, all apps submitted to the App Store that access user data are required to include a purpose string. If you’re using external libraries or SDKs, they may reference APIs that require a purpose string. While your app might not use these APIs, a purpose string is still required. You can contact the developer of the library or SDK and request they release a version of their code that doesn’t contain the APIs. Learn more (<a href="https://developer.apple.com/documentation/uikit/core_app/protecting_the_user_s_privacy).**ITMS-90683" target="_blank" rel="noopener">https://developer.apple.com/documentation/uikit/core_app/protecting_the_user_s_privacy).**ITMS-90683</a>: Missing Purpose String in Info.plist** - Your app’s code references one or more APIs that access sensitive user data. The app’s Info.plist file should contain a NSLocationWhenInUseUsageDescription key with a user-facing purpose string explaining clearly and completely why your app needs the data. Starting Spring 2019, all apps submitted to the App Store that access user data are required to include a purpose string. If you’re using external libraries or SDKs, they may reference APIs that require a purpose string. While your app might not use these APIs, a purpose string is still required. You can contact the developer of the library or SDK and request they release a version of their code that doesn’t contain the APIs. Learn more (<a href="https://developer.apple.com/documentation/uikit/core_app/protecting_the_user_s_privacy).After" target="_blank" rel="noopener">https://developer.apple.com/documentation/uikit/core_app/protecting_the_user_s_privacy).After</a> you’ve corrected the issues, you can use Xcode or Application Loader to upload a new binary to App Store Connect.Best regards,The App Store Team</td>
+</tr>
+</tbody></table>
+<p>위치정보를 쓰지도 않는데 이게 무슨 소리인가 해서 찾아봤다. </p>
+<p><a href="https://github.com/facebook/react-native/issues/20879" target="_blank" rel="noopener">https://github.com/facebook/react-native/issues/20879</a></p>
+<p>아마도 RN bundle에 위치정보 이용 코드가 포함되는 듯하다</p>
+<p>해결을 위해 일단 메일에서 요구하는대로 xcode를 열어 info.plist 파일에 요구되는 key들을 추가했다.</p>
+<p>참고로 xcode에서는 Privacy - Location Always Usage Description이다. </p>
+<p>에디터에서 파일을 열어보면 엑스코드에서 추가한 키가 <code>&lt;key&gt;NSLocationAlwaysUsageDescription&lt;/key&gt;</code> 로 추가된 것을 볼 수 있다.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ldyulia.github.io/2019/07/19/Missing Purpose String/" data-id="ck2eaxst7000ffr0plop23buk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Application Loader를 이용하여 .ipa업로드" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/07/16/Application Loader를 이용하여 .ipa업로드/" class="article-date">
@@ -80,7 +204,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/07/16/Application Loader를 이용하여 .ipa업로드/" data-id="ck17vm5jp0007kc0pz0uf1sbk" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/07/16/Application Loader를 이용하여 .ipa업로드/" data-id="ck2eaxst5000cfr0pgo1bt0rg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -117,7 +241,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/07/10/Webview - android에서 http프로토콜 접속하기/" data-id="ck17vm5jy000dkc0p2bwr8wm8" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/07/10/Webview - android에서 http프로토콜 접속하기/" data-id="ck2eaxstj000nfr0prnhtgds6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -163,7 +287,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/06/28/(React Native) WebView에서 pop up처리를 위해 했던 삽질들/" data-id="ck17vm5jc0001kc0p4sudm2dv" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/06/28/(React Native) WebView에서 pop up처리를 위해 했던 삽질들/" data-id="ck2eaxst20008fr0py79q2n8k" class="article-share-link">Share</a>
       
       
     </footer>
@@ -221,7 +345,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/06/25/injectJavaScript의 사용/" data-id="ck17vm5k6000nkc0p22q56zhh" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/06/25/injectJavaScript의 사용/" data-id="ck2eaxstr000xfr0pwxf781n9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -251,7 +375,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/06/20/window.location/" data-id="ck17vm5ka000ukc0pwfl2t0ej" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/06/20/window.location/" data-id="ck2eaxstv0015fr0pnphq8d2u" class="article-share-link">Share</a>
       
       
     </footer>
@@ -280,7 +404,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/06/14/WebView에 progress bar 달기/" data-id="ck17vm5jt000akc0pu98ws3tp" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/06/14/WebView에 progress bar 달기/" data-id="ck2eaxstm000sfr0pxuid43bs" class="article-share-link">Share</a>
       
       
     </footer>
@@ -310,148 +434,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/06/13/WebView에서 페이지 전환시 로딩/" data-id="ck17vm5jz000fkc0pe9xr9zlf" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-작업 리뷰" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/06/13/작업 리뷰/" class="article-date">
-  <time datetime="2019-06-13T03:34:01.686Z" itemprop="datePublished">2019-06-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Expo의 WebView를 이용한 AppPack프로젝트</p>
-<p>2019/06/12</p>
-<p>몇 가지 문제점</p>
-<ol>
-<li>Social login(특히 구글) 처리 때문에 expo밖으로 빠져나가서 xcode파일에 직접 접근을 해야했다.</li>
-<li>iOS 에서 이전 페이지로 돌아가기 swipe 제스쳐(사파리처럼)를 구현하려면 WKWebView를 이용해야했고 이를 위해 또 다시 expo가 아닌 react-native cli를 이용해야했다. </li>
-</ol>
-<p>결국 Expo를 버리고 React-native로만 작업하는 쪽으로 가야할 것 같은데 이 경우 React-native를 굳이 이용하는 메리트가 없다고 느껴짐</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/06/13/작업 리뷰/" data-id="ck17vm5kc000zkc0pv8lfye92" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-WebView에서 social login처리" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/06/11/WebView에서 social login처리/" class="article-date">
-  <time datetime="2019-06-11T04:10:54.982Z" itemprop="datePublished">2019-06-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="WebView에서-Google-social-login구현하기"><a href="#WebView에서-Google-social-login구현하기" class="headerlink" title="WebView에서 Google social login구현하기"></a>WebView에서 Google social login구현하기</h3><hr>
-<h5 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h5><p>코드 상단에 아래 코드를 삽입한다</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">let userAgent = &apos;Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/ 604.1.21 (KHTML, like Gecko) Version/ 12.0 Mobile/17A6278a Safari/602.1.26&apos;;</span><br><span class="line"></span><br><span class="line">if (Platform.OS !== &apos;ios&apos;) &#123;</span><br><span class="line">  userAgent = &apos;Mozilla/5.0 (Linux; Android 8.0.0; TA-1053 Build/OPR1.170623.026) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3368.0 Mobile Safari/537.36&apos;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>그리고 WebView 컴포넌트에 프러퍼티로 다음과 같이 삽입</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;WebView        </span><br><span class="line">  source=&#123;&#123;uri: &apos;https://google.com/&apos;&#125;&#125;</span><br><span class="line">  userAgent=&#123;userAgent&#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="ios"><a href="#ios" class="headerlink" title="ios"></a>ios</h4><p>ios의 경우 js파일 밖에서 한 번 더 처리를 해주어야 한다.</p>
-<p>For iOS, you need to add the code below inside the method <code>didFinishLaunchingWithOptions</code>(before the line <code>return YES;</code>) in <code>AppDelegate.m</code> implementation:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NSString *userAgent = @&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36&quot;;</span><br><span class="line">NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:userAgent, @&quot;UserAgent&quot;, nil];</span><br><span class="line">[[NSUserDefaults standardUserDefaults] registerDefaults:dictionary];</span><br></pre></td></tr></table></figure>
-
-<p>Reference : <a href="https://stackoverflow.com/questions/36590207/set-user-agent-with-webview-with-react-native" target="_blank" rel="noopener">https://stackoverflow.com/questions/36590207/set-user-agent-with-webview-with-react-native</a></p>
-<p>** expo eject 하는 경우 ? How would you like to eject your app? 에서 react native를 선택**</p>
-<p>이유는 알 수 없지만 OneSignal example 파일을 그대로 활용할 때는 ios에서 위 처리를 따로 해 주지 않아도 구글 로그인이 잘 작동됐다</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/06/11/WebView에서 social login처리/" data-id="ck17vm5k3000jkc0pbw9iavsw" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-WebView페이지 뒤로가기(onNavigationStateChange)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/06/11/WebView페이지 뒤로가기(onNavigationStateChange)/" class="article-date">
-  <time datetime="2019-06-11T04:02:53.507Z" itemprop="datePublished">2019-06-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="React-native-WebView에서-페이지-뒤로가기-구현-onNavigationStateChange"><a href="#React-native-WebView에서-페이지-뒤로가기-구현-onNavigationStateChange" class="headerlink" title="React native WebView에서 페이지 뒤로가기 구현(onNavigationStateChange)"></a>React native WebView에서 페이지 뒤로가기 구현(onNavigationStateChange)</h4><hr>
-<p>As we know built in back button is not provided in iOs but it is provided in android .</p>
-<p>So for considering both platform there is two possibility.</p>
-<p><strong>Android.</strong></p>
-<p>-&gt; For android you have to define <code>BackHandler</code> so here are the step.</p>
-<ol>
-<li><p><code>import</code> it like this.</p>
-<p><code>import {BackHandler } from &#39;react-native&#39;</code>.</p>
-</li>
-<li><p>initialize <code>backhandler</code> inside the life cycle methods.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">componentDidMount() &#123;</span><br><span class="line">    BackHandler.addEventListener(&apos;hardwareBackPress&apos;, this.handleBackPress);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">componentWillUnmount() &#123;</span><br><span class="line">    BackHandler.removeEventListener(&apos;hardwareBackPress&apos;, this.handleBackPress);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">handleBackPress = () =&gt; &#123;</span><br><span class="line">   if (this.state.canGoBack) &#123;</span><br><span class="line">      this.refWeb.goBack();</span><br><span class="line">    &#125;</span><br><span class="line">  else&#123;</span><br><span class="line">    this.props.navigation.goBack(null)</span><br><span class="line">    &#125;</span><br><span class="line">  return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>define a userdefine variable <code>canGoBack</code> inside the <code>status</code>.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">constructor(props) &#123;</span><br><span class="line">  super(props)</span><br><span class="line">   </span><br><span class="line">  this.state = &#123;</span><br><span class="line">    canGoBack: false</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>create a method which detect the change in navigation of the webview and bind it with the web view.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">onNavigationStateChange(navState) &#123;</span><br><span class="line">     this.setState(&#123;</span><br><span class="line">     canGoBack: navState.canGoBack</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Bind it like this.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;WebView</span><br><span class="line">    ref=&#123;(myWeb) =&gt; this.refWeb = myWeb&#125;</span><br><span class="line">    onNavigationStateChange=&#123;this.onNavigationStateChange.bind(this)&#125;               </span><br><span class="line">    source=&#123;&#123; uri: &apos;https://stackoverflow.com/questions/51712310/react- </span><br><span class="line">    native-webview-navigation-issue&apos; &#125;&#125; /&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>And thsts it you are ready to go..</p>
-</li>
-</ol>
-<p><strong>ios</strong></p>
-<p>For iOs you didn’t have to bother too much.</p>
-<ol>
-<li><p>Create a button for back press above the <code>webview</code> or according to your design logic</p>
-</li>
-<li><p>Follow the above <code>webview</code> and navigation logic . forgot about the <code>backhandler</code> and set this code inside the <code>onPress()</code> method of your created <code>button</code> of <code>backpress</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if (this.state.canGoBack) &#123;</span><br><span class="line">    this.refWeb.goBack();</span><br><span class="line">&#125;else&#123;</span><br><span class="line">    this.props.navigation.goBack(null)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>Note : Here I use <code>stackNavigator</code> for screen navigation so i used <code>this.props.navigation.goBack(null)</code> this code. if you didn’t use it then dont consider this code and replace with your feasible navigator code in <code>else</code> condition</p>
-<p>Reference : <a href="https://stackoverflow.com/questions/51712310/react-native-webview-navigation-issue" target="_blank" rel="noopener">https://stackoverflow.com/questions/51712310/react-native-webview-navigation-issue</a></p>
-<p><strong>ios 스와이핑 제스쳐로 뒤로 가기 구현</strong></p>
-<p>react-native-wewebview-reborn 모듈을 이용 (react-native-webview에서도 가능)</p>
-<p>allowsBackForwardNavigationGestures 을 props로 이용하면 된다</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123;Component&#125; from &apos;react&apos;;</span><br><span class="line">import &#123; View &#125; from &apos;react-native&apos;;</span><br><span class="line">import WKWebView from &apos;react-native-wkwebview-reborn&apos;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">export default class MyApp extends Component &#123;</span><br><span class="line">	...</span><br><span class="line">	&lt;View&gt;</span><br><span class="line">		&lt;WKWebView </span><br><span class="line">			source=&#123;&#123;uri : &apos;https://google.com&apos;&#125;&#125;</span><br><span class="line">			allowBackForwardNavigationGestures=&#123;true&#125;</span><br><span class="line">		/&gt;</span><br><span class="line">	&lt;/View&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://ldyulia.github.io/2019/06/11/WebView페이지 뒤로가기(onNavigationStateChange)/" data-id="ck17vm5k4000kkc0pl9z6gzpt" class="article-share-link">Share</a>
+      <a data-url="https://ldyulia.github.io/2019/06/13/WebView에서 페이지 전환시 로딩/" data-id="ck2eaxste000ifr0pej07nrot" class="article-share-link">Share</a>
       
       
     </footer>
@@ -479,7 +462,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode-11/">Xcode 11</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/built-in/">built-in</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-native/">react native</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scope/">scope</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/디스크립터/">디스크립터</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/메서드/">메서드</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/빌트인/">빌트인</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/생성자함수/">생성자함수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스코프/">스코프</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스크립트언어/">스크립트언어</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/인스턴스/">인스턴스</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/자바스크립트-용어정리/">자바스크립트 용어정리</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/전역변수/">전역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/지역변수/">지역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴파일러/">컴파일러</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/프로토타입/">프로토타입</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CodePush/">CodePush</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode-11/">Xcode 11</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/built-in/">built-in</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/forEach/">forEach</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/object/">object</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-native/">react native</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-navigation/">react navigation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scope/">scope</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/디스크립터/">디스크립터</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/메서드/">메서드</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/빌트인/">빌트인</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/생성자함수/">생성자함수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스코프/">스코프</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/스크립트언어/">스크립트언어</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/인스턴스/">인스턴스</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/자바스크립트-용어정리/">자바스크립트 용어정리</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/전역변수/">전역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/지역변수/">지역변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴파일러/">컴파일러</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/프로토타입/">프로토타입</a></li></ul>
     </div>
   </div>
 
@@ -489,7 +472,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Xcode/" style="font-size: 20px;">Xcode</a> <a href="/tags/Xcode-11/" style="font-size: 10px;">Xcode 11</a> <a href="/tags/built-in/" style="font-size: 10px;">built-in</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/react-native/" style="font-size: 20px;">react native</a> <a href="/tags/scope/" style="font-size: 10px;">scope</a> <a href="/tags/디스크립터/" style="font-size: 10px;">디스크립터</a> <a href="/tags/메서드/" style="font-size: 10px;">메서드</a> <a href="/tags/빌트인/" style="font-size: 10px;">빌트인</a> <a href="/tags/생성자함수/" style="font-size: 10px;">생성자함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/스크립트언어/" style="font-size: 10px;">스크립트언어</a> <a href="/tags/인스턴스/" style="font-size: 10px;">인스턴스</a> <a href="/tags/자바스크립트-용어정리/" style="font-size: 10px;">자바스크립트 용어정리</a> <a href="/tags/전역변수/" style="font-size: 10px;">전역변수</a> <a href="/tags/지역변수/" style="font-size: 10px;">지역변수</a> <a href="/tags/컴파일러/" style="font-size: 10px;">컴파일러</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a>
+      <a href="/tags/CodePush/" style="font-size: 10px;">CodePush</a> <a href="/tags/Xcode/" style="font-size: 15px;">Xcode</a> <a href="/tags/Xcode-11/" style="font-size: 10px;">Xcode 11</a> <a href="/tags/built-in/" style="font-size: 10px;">built-in</a> <a href="/tags/forEach/" style="font-size: 10px;">forEach</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/object/" style="font-size: 10px;">object</a> <a href="/tags/react-native/" style="font-size: 20px;">react native</a> <a href="/tags/react-navigation/" style="font-size: 10px;">react navigation</a> <a href="/tags/scope/" style="font-size: 10px;">scope</a> <a href="/tags/디스크립터/" style="font-size: 10px;">디스크립터</a> <a href="/tags/메서드/" style="font-size: 10px;">메서드</a> <a href="/tags/빌트인/" style="font-size: 10px;">빌트인</a> <a href="/tags/생성자함수/" style="font-size: 10px;">생성자함수</a> <a href="/tags/스코프/" style="font-size: 10px;">스코프</a> <a href="/tags/스크립트언어/" style="font-size: 10px;">스크립트언어</a> <a href="/tags/인스턴스/" style="font-size: 10px;">인스턴스</a> <a href="/tags/자바스크립트-용어정리/" style="font-size: 10px;">자바스크립트 용어정리</a> <a href="/tags/전역변수/" style="font-size: 10px;">전역변수</a> <a href="/tags/지역변수/" style="font-size: 10px;">지역변수</a> <a href="/tags/컴파일러/" style="font-size: 10px;">컴파일러</a> <a href="/tags/프로토타입/" style="font-size: 10px;">프로토타입</a>
     </div>
   </div>
 
@@ -511,23 +494,23 @@
       <ul>
         
           <li>
+            <a href="/2019/10/26/CodePush release command/">CodePush release command</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/16/forEach를 통한 object반복문:timestamp순으로 정렬/">forEach를 통해 object의 key 또는 value 가져오기 / timestamp 순서로 정렬</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/14/## React Navigation getParams in function component  /">React Navigation getParams in function component</a>
+          </li>
+        
+          <li>
             <a href="/2019/10/01/chrono-file-not-found/">chrono file not found</a>
           </li>
         
           <li>
             <a href="/2019/09/22/Xcode-11-Error-Multiple-commands-produce/">Xcode 11 Error: Multiple commands produce</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/03/react-native-webwiew와 react-native-unimodules 화해해라/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/30/react-native-push-notification설치/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/29/react-native-push-notification 에러/">(no title)</a>
           </li>
         
       </ul>
